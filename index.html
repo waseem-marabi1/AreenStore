@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Parastoo:wght@400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style='font-family: "Parastoo", "Aref Ruqaa", serif; '>
+    <!-- head -->
+    <div
+        class="h-[60px] w-full flex justify-between items-center p-10 fixed z-50 bg-[#FDFBF9]/70 backdrop-blur-sm border-b border-[#E9E2DD]">
+
+        <div class="flex gap-2">
+            <div><img src="img/areen-logo.jpeg" class="rounded-full w-[60px] h-[60px]" alt=""></div>
+            <p class="text-purple-950 italic font-[Great_Vibes] hidden md:block">Arren <br> <span
+                    class="font-[Tajawal] tracking-widest">store</span></p>
+
+        </div>
+
+        <div class="hidden md:flex gap-10">
+            <button data-page="home"
+                class="btnpage font-[Cairo] tracking-widest hover:bg-purple-100 rounded-3xl p-3 text-xl bg-purple-900 text-white">الرئيسية</button>
+            <button data-page="shop"
+                class="btnpage font-[Cairo] tracking-widest hover:bg-purple-100 rounded-3xl p-3 text-xl">المتجر</button>
+            <button data-page="howme"
+                class="btnpage font-[Cairo] tracking-widest hover:bg-purple-100 rounded-3xl p-3 text-xl">من نحن</button>
+            <button data-page="contact"
+                class="btnpage font-[Cairo] tracking-widest hover:bg-purple-100 rounded-3xl p-3 text-xl">تواصل
+                معنا</button>
+
+
+        </div>
+        <div class="flex gap-5">
+            <div class="relative bg-purple-100 w-10 h-10 flex rounded-full justify-center items-center">
+                <p class="counter absolute -top-3 right-7 text-white bg-purple-950 rounded-full w-6 h-6  text-center">1
+                </p>
+                <i class="fa-solid fa-cart-plus"></i>
+
+            </div>
+            <button id="btnmun"
+                class="md:hidden brelative bg-purple-100 w-10 h-10 flex rounded-full justify-center items-center"><i
+                    id="iconlist" class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+
+    <div id="listmubile" class="hidden lg:hidden  fixed right-0 flex-col w-full 
+                bg-white border-2  text-gray-800  mt-[80px] z-50 pc-5">
+
+        <button data-page="home"
+            class="btnhead btnpage font-[Cairo] tracking-widest hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right">الرئيسية</button>
+        <button data-page="shop"
+            class="btnhead btnpage font-[Cairo] tracking-widest hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right">المتجر</button>
+        <button data-page="howme"
+            class="btnhead btnpage font-[Cairo] tracking-widest hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right">من
+            نحن</button>
+        <button data-page="contact"
+            class="btnhead btnpage font-[Cairo] tracking-widest hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right">تواصل
+            معنا</button>
+    </div>
+    <!-- home -->
+
+    <div id="home" class="page  pt-20  ">
+        <div class="grid md:grid-cols-2 ">
+            <div
+                class="lg:px-20 p-10 space-y-7 bg-gradient-to-b from-white via-via-purple-50 to-purple-200  md:bg-gradient-to-br md:from-purple-100 md:via-purple-50 md:to-white">
+                <div
+                    class="flex gap-2 bg-purple-100  rounded-2xl text-center p-1 italic tracking-widest font-serif text-sm ">
+                    <i class="fa-regular fa-star "></i>
+                    <p>هدايا لكل لحظة مميزة</p>
+                </div>
+                <h1 class="text-5xl font-bold text-purple-950 tracking-wide max-w-md leading-tight">لمسة أنيقة لكل
+                    مناسبة
+                </h1>
+                <p class="text-gray-600  text-xl">من باقات الساتان الفاخرة إلى الهدايا المطبوعة وعطور راقية — اكتشف
+                    مجموعة Areen المختارة بعناية لتحوّل كل مناسبة إلى ذكرى تدوم.</p>
+                <div class="flex gap-4">
+                    <button data-page="shop"
+                        class="btnpagefoter w-[150px] h-[50px]  flex items-center justify-center bg-purple-950 hover:bg-purple-950/70 text-white text-2xl p-3 rounded-3xl ">تسوق
+                        الان</button>
+                    <button data-page="howme"
+                        class="btnpagefoter w-[150px] h-[50px] flex items-center justify-center   border-2  hover:bg-purple-100 text-2xl p-3 rounded-3xl ">تعرف
+                        علينا</button>
+
+                </div>
+                <ul class="list-disc text-gray-500 flex gap-x-10 flex-wrap ">
+                    <li>أعياد ميلاد</li>
+                    <li>التخرج</li>
+                    <li>الأعراس</li>
+                    <li>ذكرى الزواج</li>
+                    <li>المواليد</li>
+                    <li>شكر وتقدير</li>
+                    <li>المناسبات الخاصة</li>
+                </ul>
+            </div>
+            <div class="relative flex bg-gradient-to-br from-purple-200 via-purple-100 to-purple-50 p-3">
+
+
+                <img src="img/areen-logo.jpeg" class="m-auto  rounded-full w-[300px] h-[300px]" alt="">
+            </div>
+        </div>
+        <!-- الاقسام المميزة -->
+        <div class="bg-gradient-to-b from-purple-100 via-purple-50 to-purple-50 py-10 lg:p-10 lg:px-20">
+            <div class="flex px-5 mb-4">
+                <div class="space-y-2">
+                    <p class="text-gray-400">تصفّح المجموعات</p>
+                    <h2 class="text-4xl text-purple-900">الأقسام المميزة</h2>
+                </div>
+                <button data-page="shop" class="btnpagefoter mr-auto hover:text-purple-600">كل الأقسام   </button>
+            </div>
+
+            <div class="w-full grid grid-cols-2 p-2 gap-2 md:grid-cols-3 lg:grid-cols-4 ">
+
+                <div class="group relative  rounded-3xl overflow-hidden">
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">باقات الساتان</h1>
+                        <p class="text-white/80">يبقى ذكرى للابد</p>
+                    </div>
+                </div>
+
+
+                <div class=" group relative rounded-3xl overflow-hidden">
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">باقات الورد الصناعي </h1>
+                        <p class="text-white/80">جمال واثر للابد</p>
+                    </div>
+                </div>
+
+                <div class="group relative  rounded-3xl overflow-hidden">
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">الأكسسوارات</h1>
+                        <p class="text-white/80">قطع انيقة جميلة</p>
+                    </div>
+                </div>
+                <div class="group relative  rounded-3xl overflow-hidden">
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">عطور نسائية</h1>
+                        <p class="text-white/80">روائح ساحرة</p>
+                    </div>
+                </div>
+                <div class="group relative  rounded-3xl overflow-hidden">
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">عطور رجالية</h1>
+                        <p class="text-white/80">اناقة راقية</p>
+                    </div>
+                </div>
+                <div class="group relative  rounded-3xl overflow-hidden">
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">باقات هدايا</h1>
+                        <p class="text-white/80">علب جاهزة بلمسة فاخرة</p>
+                    </div>
+                </div>
+                <div class="group relative  rounded-3xl overflow-hidden">
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">هدايا الطباعة</h1>
+                        <p class="text-white/80">لمسة شخصية بصورك</p>
+                    </div>
+                </div>
+                <div class="group relative  rounded-3xl overflow-hidden">
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">مجموعة التخرج</h1>
+                        <p class="text-white/80">احتفل بلحظاتك</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- الاكثر مبيعاً -->
+        <div class="space-y-10 bg-gradient-to-t from-purple-50 via-purple-50 to-purple-100 lg:px-14 pt-20 lg:p-20">
+            <div class="flex justify-center   px-5 py-10 mb-4 ">
+                <div class="space-y-2">
+                    <h2 class="text-4xl text-purple-900 font-bold">الأكثر مبيعاً</h2>
+                </div>
+            </div>
+            <div class="w-full grid grid-cols-2 p-2 gap-3 md:grid-cols-3 lg:grid-cols-4  ">
+                <div
+                    class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                    <div>
+                        <img src="img/areen-logo.jpeg" alt=""
+                            class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                        <p
+                            class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                            الاكثر مبيعاَ</p>
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-2xl text-purple-900 font-medium">باقات ستان كلاسيكية</h2>
+                        <p class="text-gray-500">باقات ورد ساتان فاخرة مصنوعة يدوياً باناقة عالية مناسبة لجميع المناسبات
+                        </p>
+                    </div>
+                    <div class="flex justify-between p-3 ">
+                        <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                        <button
+                            class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                    </div>
+                </div>
+                <div
+                    class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                    <div>
+                        <img src="img/areen-logo.jpeg" alt=""
+                            class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                        <p
+                            class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                            الاكثر مبيعاَ</p>
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-2xl text-purple-900 font-medium">باقة ورد صناعي فاخرة</h2>
+                        <p class="text-gray-500">ورود صناعية بجودة عالية تحافظ على جمالها لسنوات، مثالية كهدية تدوم.</p>
+                    </div>
+                    <div class="flex justify-between p-3 ">
+                        <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                        <button
+                            class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                    </div>
+                </div>
+                <div
+                    class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                    <div>
+                        <img src="img/areen-logo.jpeg" alt=""
+                            class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                        <p
+                            class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                            الاكثر مبيعاَ</p>
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-2xl text-purple-900 font-medium">عطر روز بلوم النسائي</h2>
+                        <p class="text-gray-500">عطر نسائي فاخر بنفحات وردية ومسك ناعم يدوم طويلًا.</p>
+                    </div>
+                    <div class="flex justify-between p-3 ">
+                        <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                        <button
+                            class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                    </div>
+                </div>
+                <div
+                    class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                    <div>
+                        <img src="img/areen-logo.jpeg" alt=""
+                            class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                        <p
+                            class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                            الاكثر مبيعاَ</p>
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                        <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                    </div>
+                    <div class="flex justify-between p-3 ">
+                        <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                        <button
+                            class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- تجربة التسوق -->
+        <div
+            class="m-3 bg-gradient-to-br from-purple-400 via-purple-200 to-purple-100 p-5 rounded-3xl lg:mx-14 lg:px-14 mt-20">
+            <div class="flex flex-col  justify-center items-center">
+                <p class="tracking-widest text-xl">لماذا Areen</p>
+                <h1 class="text-purple-950 font-extrabold text-5xl">تجربة تسوّق فاخرة</h1>
+            </div>
+            <div class="  grid  gap-5 mt-14 md:p-10 lg:grid-cols-4 lg:p-0">
+                <div class="bg-white p-5 rounded-3xl ">
+                    <div
+                        class="bg-purple-950 w-14 h-14 rounded-full flex justify-center items-center text-white text-2xl">
+                        <i class="fa-regular fa-star "></i>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                        <h2 class="text-purple-950 text-2xl font-bold">تصميم فريد </h2>
+                        <p class="text-gray-500">لمسة انيقة يدوية لكل باقة وهدية</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-3xl ">
+                    <div
+                        class="bg-purple-950 w-14 h-14 rounded-full flex justify-center items-center text-white text-2xl">
+                        <i class="fa-regular fa-star "></i>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                        <h2 class="text-purple-950 text-2xl font-bold">تصميم فريد </h2>
+                        <p class="text-gray-500">لمسة انيقة يدوية لكل باقة وهدية</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-3xl ">
+                    <div
+                        class="bg-purple-950 w-14 h-14 rounded-full flex justify-center items-center text-white text-2xl">
+                        <i class="fa-regular fa-star "></i>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                        <h2 class="text-purple-950 text-2xl font-bold">تصميم فريد </h2>
+                        <p class="text-gray-500">لمسة انيقة يدوية لكل باقة وهدية</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-3xl ">
+                    <div
+                        class="bg-purple-950 w-14 h-14 rounded-full flex justify-center items-center text-white text-2xl">
+                        <i class="fa-regular fa-star "></i>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                        <h2 class="text-purple-950 text-2xl font-bold">تصميم فريد </h2>
+                        <p class="text-gray-500">لمسة انيقة يدوية لكل باقة وهدية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- اراء العملاء -->
+        <div class="m-3   p-5 rounded-3xl lg:mx-14 lg:px-14 mt-20">
+            <div class="flex flex-col  justify-center items-center">
+                <p class="tracking-widest text-xl">اراء العملاء</p>
+                <h1 class="text-purple-950 font-extrabold text-5xl">قصص سعيدة</h1>
+            </div>
+            <div class="  grid  gap-5 mt-14 md:p-10 lg:grid-cols-3 lg:p-0">
+                <div class="bg-white p-5 rounded-3xl shadow-xl ">
+                    <div class="text-purple-950   rounded-full flex  space-x-1 text-lg ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                        <h2 class=" text-gray-500 text-lg font-bold"> "الباقة كانت أجمل من الصورة! تغليف فاخر وتوصيل
+                            سريع." </h2>
+                        <p class="text-purple-950 text-xl font-bold">سارة م.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-3xl shadow-xl ">
+                    <div class="text-purple-950   rounded-full flex  space-x-1 text-lg ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                        <h2 class=" text-gray-500 text-lg font-bold"> هدية مثالية لتخرج أخي، الجودة ممتازة والألوان
+                            دقيقة. </h2>
+                        <p class="text-purple-950 text-xl font-bold">أحمد ع.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-3xl shadow-xl ">
+                    <div class="text-purple-950   rounded-full flex  space-x-1 text-lg ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                        <h2 class=" text-gray-500 text-lg font-bold"> ""أطلب من Areen دائمًا لكل مناسبة، الذوق الرفيع
+                            حاضر في كل قطعة."" </h2>
+                        <p class="text-purple-950 text-xl font-bold">ليان ك.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- تابعنا  -->
+        <div class="px-6 lg:px-20 mt-20">
+            <div
+                class="w-full bg-[#3E2457] rounded-[40px] py-4 px-8 lg:px-10 flex flex-col items-center text-center text-white">
+
+                <p class="text-gray-400 text-lg">تابعنا</p>
+
+                <h1 class="text-5xl lg:text-7xl italic font-bold">
+                    AreenStore@</h1>
+                <p class="text-gray-300 text-lg max-w-3xl mt-4">
+                    شاركنا لحظاتك المميزة وشاهد أحدث مجموعاتنا على وسائل التواصل الاجتماعي.</p>
+                <div class="flex  justify-center gap-4 mt-10">
+                    <a href="https://www.tiktok.com/@areen.store19?is_from_webapp=1&sender_device=pc" target="_blank"
+                        class="flex items-center cursor-pointer gap-2 px-5 py-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+
+                    <a href="https://wa.me/+972569506109" target="_blank"
+                        class=" flex items-center cursor-pointer gap-2  px-5 py-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition">
+                        <i class="fa-brands fa-whatsapp"></i> <span> WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/areen.store19?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank"
+                        class="flex items-center gap-2 px-5 py-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end home ; -->
+    <!-- المتجر -->
+
+    <div id="shop" class="page hidden pt-20 p-2 bg-gradient-to-b from-purple-100/20 via-purple-100 to-white ">
+        <div class="flex flex-col justify-center items-center pt-16 ">
+            <p class="text-gray-600 tracking-[3px]">Areen Store</p>
+            <h1 class="font-bold text-purple-950 text-6xl">المتجر</h1>
+            <p class="text-gray-600  mt-2">مجموعة مختارة بعناية من الورد والهدايا الفاخرة لكل المناسبات</p>
+        </div>
+        <div class=" flex flex-wrap gap-2 items-center justify-center py-7">
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">الكل</button>
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">باقات
+                الستان</button>
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">باقات
+                الورد الصناعي</button>
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">الاكسسوارات</button>
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">عطور
+                نسائية</button>
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">عطور
+                رجالية</button>
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">باقات
+                الهدايا</button>
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">هدايا
+                الطباعة</button>
+            <button
+                class="bg-purple-100 rounded-[20px] py-1 px-3 cursor-pointer hover:bg-purple-100 font-medium text-purple-900 text-lg">مجموعة
+                التخرج</button>
+        </div>
+        <div class=" p-4 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+            <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="img/areen-logo.jpeg" alt=""
+                        class="  w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-3xl">
+                    <p
+                        class="absolute top-3 right-3 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
+                        الاكثر مبيعاَ</p>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
+                    <p class="text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="text-purple-900 font-bold text-xl">60 شيكل</h2>
+                    <button
+                        class="bg-purple-100 rounded-3xl w-14 h-7 group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end the المتجر  -->
+    <!-- من نحن  -->
+    <div id="howme"
+        class="page hidden pt-32 p-6 bg-gradient-to-b from-fuchsia-50/30 via-fuchsia-200/20 to-white md:px-16 lg:px-20 ">
+        <div class="flex flex-col justify-center items-center space-y-5 p-4">
+            <div><img src="img/areen-logo.jpeg" class="size-[150px] rounded-full" alt=""></div>
+            <p class="text-gray-600 tracking-[3px]">Areen Store</p>
+            <h1 class="font-bold text-purple-950 text-6xl">قصتنا</h1>
+            <p class="text-gray-500  mt-2 leading-[30px] text-xl">بدأت Areen Store من شغف بسيط: أن نصنع لحظات فرح لا
+                تُنسى للجميع. اليوم نقدّم
+                مجموعة مختارة بعناية من الورد الفاخر، الهدايا الأنيقة، والعطور الراقية لكل المناسبات — من أعياد الميلاد
+                إلى التخرج والأعراس والمواليد.</p>
+        </div>
+        <div class="grid md:grid-cols-3  gap-5 mt-10 ">
+            <div
+                class="bg-white p-10 flex flex-col justify-center items-center space-y-2 rounded-3xl shadow-md shadow-black/10">
+                <div class="bg-fuchsia-200/70 p-2 rounded-xl text-purple-900 text-2xl"><i
+                        class="fa-regular fa-heart"></i></div>
+                <h1 class="font-bold text-3xl">شغف بالتفاصيل</h1>
+                <p class="text-gray-500 text-xl">كل باقة وهدية تُصنع بحب واهتمام باللمسات الأخيرة.</p>
+            </div>
+            <div
+                class="bg-white p-10 flex flex-col justify-center items-center space-y-2 rounded-3xl shadow-md shadow-black/10">
+                <div class="bg-fuchsia-200/70 p-2 rounded-xl text-purple-900 text-2xl"><i class="fa-regular fa-gem"></i>
+                </div>
+                <h1 class="font-bold text-3xl">جودة عالية</h1>
+                <p class="text-gray-500 text-xl">منتجات مختارة بعناية من أفضل المصادر.</p>
+            </div>
+            <div
+                class="bg-white p-10 flex flex-col justify-center items-center space-y-2 rounded-3xl shadow-md shadow-black/10">
+                <div class="bg-fuchsia-200/70 p-2 rounded-xl text-purple-900 text-2xl"><i class="fa-solid fa-gift"></i>
+                </div>
+                <h1 class="font-bold text-3xl">تجربة فريدة</h1>
+                <p class="text-gray-500 text-xl">لمسة شخصية وخيارات تخصيص لكل عميل.</p>
+            </div>
+        </div>
+        <div
+            class="p-10 bg-gradient-to-br from-purple-300/50 via-purple-200 to-amber-100/50 flex flex-col justify-center items-center space-y-4 rounded-3xl my-20">
+            <h1 class="text-5xl font-bold text-purple-900 italic">رسالتنا</h1>
+            <p class="text-gray-500 leading-9 text-lg text-center ">نؤمن بأن الهدية لغة عالمية تعبّر عن الحب والتقدير.
+                لذلك نضع كل عناية في اختيار وتقديم منتجاتنا لتصل إليك
+                — ولمن تحب — بأجمل صورة.</p>
+        </div>
+    </div>
+    <!-- end the من نحن  -->
+    <!-- تواصل معنا -->
+    <div id="contact" class="page hidden pt-32 p-6 bg-gradient-to-b from-fuchsia-50/30 via-fuchsia-200/20 to-white ">
+        <div class="flex flex-col justify-center items-center space-y-5 p-4">
+            <p class="text-gray-600 tracking-[3px]">Areen Store</p>
+            <h1 class="font-bold text-purple-950 text-6xl">تواصل معنا</h1>
+            <p class="text-gray-500  mt-2 leading-[30px] text-xl">نحن هنا لسماعك — أخبرنا كيف يمكننا مساعدتك.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-7 lg:px-20">
+            <div class="bg-white rounded-3xl flex flex-col  p-6 mt-10">
+                <p class="text-xl mb-1">الاسم</p>
+                <input type="text" name="" id="" class="bg-purple-100/50 rounded-[50px] p-2 text-xl mb-5">
+                <p class="text-xl mb-1">البريد الالكتروني</p>
+                <input type="email" name="" id="" class="bg-purple-100/50 rounded-[50px] p-2 text-xl mb-5">
+                <p class="text-xl mb-1">الرسالة</p>
+                <textarea name="" id="" class="bg-purple-100/50 rounded-[50px] p-2 text-xl mb-5"></textarea>
+                <input type="button" class="bg-purple-950 w-40 h-10 text-white text-xl rounded-2xl"
+                    value="ارسل الرسالة">
+            </div>
+            <div class="flex flex-col space-y-4 mt-10">
+                <div
+                    class="bg-white shadow-md shadow-black/30 rounded-3xl p-2 flex gap-3 hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-fuchsia-300/30 rounded-full p-3 flex"><i
+                            class="fa-solid fa-phone m-auto text-xl"></i></div>
+                    <div>
+                        <p class="text-gray-600 text-lg">الهاتف</p>
+                        <h1 class="text-xl tracking-widest">056-950-6109</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white shadow-md shadow-black/30 rounded-3xl p-2 flex gap-3 hover:shadow-lg transition duration-300">
+                    <div
+                        class="w-14 h-14 justify-center items-center text-green-500 text-center bg-fuchsia-300/30 rounded-full flex ">
+                        <i class="fa-brands fa-whatsapp p-4  text-2xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-lg">واتساب</p>
+                        <h1 class="text-xl tracking-widest">056-950-6109</h1>
+                    </div>
+                </div>
+                <div
+                    class="bg-white shadow-md shadow-black/30 rounded-3xl p-2 flex gap-3 hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 text-center bg-fuchsia-300/30 rounded-full flex size-15"><i
+                            class="fa-solid fa-location-dot p-4 m-auto text-xl"></i></div>
+                    <div>
+                        <p class="text-gray-600 text-lg">الموقع</p>
+                        <h1 class="text-xl tracking-widest">فلسطين</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- floot -->
+    <div class="p-5 mt-20 grid gap-4 lg:grid-cols-4 ">
+        <!--  -->
+        <div class="space-y-4">
+            <div class="flex items-center gap-4">
+
+                <div>
+                    <img src="img/areen-logo.jpeg" class="w-20 h-20 rounded-full object-cover" alt="">
+                </div>
+                <div class="text-right">
+                    <h1 class="font-['Great_Vibes'] text-5xl text-purple-900 italic ">
+                        Areen
+                    </h1>
+
+                    <p class="font-['Tajawal'] text-gray-600 text-sm tracking-[5px] uppercase mt-2">
+                        Store
+                    </p>
+                </div>
+            </div>
+            <div class="text-gray-500 font-medium text-lg mt-3">
+                <p>متجر متكامل للورد والهدايا الفاخرة لجميع المناسبات — لمسة أنيقة لكل لحظة مميزة.</p>
+            </div>
+        </div>
+
+
+        <div class="space-y-4">
+            <h1 class="text-2xl text-purple-900 font-bold">روابط سريعة</h1>
+            <ul class=" flex flex-col gap-2 text-gray-500 font-semibold ">
+
+                <li class="hover:-translate-x-2 transition-all duration-200">
+                    <button data-page="shop" class="btnpagefoter">
+                        <i class="fa-solid fa-angle-left ml-2"></i>
+                        المتجر
+                    </button>
+                </li>
+                <li class="hover:-translate-x-2 transition-all duration-200"> <button data-page="howme"
+                        class="btnpagefoter">
+                        <i class="fa-solid fa-angle-left ml-2"></i>
+                        من نحن</button>
+                </li>
+                <li class="hover:-translate-x-2 transition-all duration-200"> <button data-page="contact"
+                        class="btnpagefoter">
+                        <i class="fa-solid fa-angle-left ml-2"></i>
+                        تواصل معنا</button>
+                </li>
+                <li class="hover:-translate-x-2 transition-all duration-200"> <button data-page="shop"
+                        class="btnpagefoter">
+                        <i class="fa-solid fa-angle-left ml-2"></i>
+                        سلة التسوق</button>
+                </li>
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <h1 class="text-2xl text-purple-900 font-bold">تواصل معنا</h1>
+            <ul class=" flex flex-col gap-2 text-gray-500 font-semibold ">
+                <li class="hover:-translate-x-2 transition-all duration-200"><i
+                        class="fa-solid fa-angle-left ml-2"></i><a href="https://wa.me/972569506109"
+                        target="_blank">972569506109</a></li>
+                <li class="hover:-translate-x-2 transition-all duration-200"><i
+                        class="fa-solid fa-angle-left ml-2"></i><a
+                        href="https://www.instagram.com/areen.store19?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank">AreenStore</a></li>
+                <li class="hover:-translate-x-2 transition-all duration-200"><i
+                        class="fa-solid fa-angle-left ml-2"></i><a>فلسطين\جنين</a></li>
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <h1 class="text-2xl text-purple-900 font-bold">تابعنا</h1>
+            <div class="flex gap-5 text-center ">
+                <a href="https://www.instagram.com/areen.store19?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
+                    <div
+                        class=" bg-white shadow-md flex justify-center items-center shadow-black rounded-full size-12 cursor-pointer hover:bg-purple-800 hover:text-white transition-all duration-200">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@areen.store19?is_from_webapp=1&sender_device=pc" target="_blank">
+                    <div
+                        class=" bg-white shadow-md flex justify-center items-center shadow-black rounded-full size-12 cursor-pointer hover:bg-purple-800 hover:text-white transition-all duration-200">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                </a>
+            </div>
+            <p class="mt-4">اشترك في نشرتنا لتصلك أحدث المجموعات والعروض.</p>
+        </div>
+
+    </div>
+    <hr>
+    <div class="flex p-6 justify-between">
+        <p class=" ">© 2026 Areen Store — جميع الحقوق محفوظة</p>
+        <p class="tracking-[2px] "><i class="fa-solid fa-heart text-red-600"></i> Development by <a
+                href="https://www.linkedin.com/in/waseem-marabi-b17b06326/" target="_blank"
+                class="text-purple-700 font-bold"> waseem mrabi</a> </p>
+    </div>
+    <script src="js/scrept.js"></script>
+
+</body>
+
+</html>
