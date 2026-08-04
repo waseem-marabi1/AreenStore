@@ -16,8 +16,7 @@
 
 <body style='font-family: "Parastoo", "Aref Ruqaa", serif; '>
     <!-- start head -->
-
-    <div
+    <div 
         class="h-[60px] w-full flex justify-between items-center p-10 fixed z-50 bg-[#FDFBF9]/70 backdrop-blur-sm border-b border-[#E9E2DD]">
         <button id="btnmun"
             class="md:hidden brelative bg-purple-100 w-10 h-10 flex rounded-full justify-center items-center"><i
@@ -52,7 +51,9 @@
 
                 </div>
             </div>
+            
         </a>
+        
 
 
 
@@ -71,12 +72,15 @@
 
 
         <div class="flex gap-2">
+            <a id="loginbtn" href="login.html" class="m-auto ml-9"><i class="fa-regular fa-user text-2xl"></i></a>
+<div id="lginusername" class="m-auto ml-9 text-xl tracking-wider font-medium"></div>
             <div><a href="index.html"> <img src="img/areen-logo.jpeg" class="rounded-full w-[60px] h-[60px]" alt=""></a>
             </div>
             <p class="text-purple-950 italic font-[Great_Vibes] hidden md:block">Arren <br> <span
                     class="font-[Tajawal] tracking-widest">store</span></p>
 
         </div>
+        
     </div>
 
     </div>
@@ -123,6 +127,25 @@
                 <img src="img/areen-logo.jpeg" class="m-auto  rounded-full w-[300px] h-[300px]" alt="">
             </div>
         </div>
+        <!-- قسم الفيديو  -->
+
+        <div class="flex flex-col-reverse justify-center items-center px-5 py-10 md:gap-10 md:flex-row lg:gap-36 bg-purple-300/20 ">
+            <div class=" flex flex-col items-center justify-center   gap-5 text-purple-900">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl leading-tight font-extrabold">هدايا تعبر عن مشاعرك </h1>
+                <div class="flex justify-center items-center gap-3">
+                    <div class="w-20 md:w-28 h-0.5 bg-purple-400/80"></div>
+                    <span><i class="fa-solid fa-heart text-2xl text-purple-400/80"></i></span>
+                    <div class="w-20 md:w-28 h-0.5 bg-purple-400/80"></div>
+                </div>
+                <p class="text-xl lg:text-2xl leading-8">نساعدك على اختيار الهدايا المناسبة لاجمل المناسبات </p>
+                <a href="shop.html" class=" bg-purple-600/90 hover:bg-purple-600 transition-all duration-200 px-10 py-3 lg:text-xl mx-auto text-white rounded-2xl flex justify-center items-center ">تسوق الان <i class="fa-solid fa-gift mr-2"></i></a>
+            </div>
+            <div class="my-10 h-[420px] w-[250px] rounded-3xl bg-white flex justify-center items-center  shadow-md shadow-gray-400 ">
+                <video id="flooer" class=" rounded-3xl h-[400px]  bg-no-repeat  object-contain rounded-4xl" autoplay muted
+                    playsinline>
+                </video>
+            </div>
+        </div>
         <!-- الاقسام المميزة -->
         <div class="bg-gradient-to-b from-purple-100 via-purple-50 to-purple-50 py-10 lg:p-10 lg:px-20">
             <div class="flex px-5 mb-4">
@@ -133,83 +156,8 @@
                 <button data-page="shop" class="btnpagefoter mr-auto hover:text-purple-600">كل الأقسام </button>
             </div>
 
-            <div class="w-full grid grid-cols-2 p-2 gap-2 md:grid-cols-3 lg:grid-cols-4 ">
+            <div id="allproductindex" class="w-full grid grid-cols-2 p-2 gap-2 md:grid-cols-3 lg:grid-cols-4 ">
 
-                <div class="group relative  rounded-3xl overflow-hidden">
-                    <img src="img/areen-logo.jpeg" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">باقات الساتان</h1>
-                        <p class="text-white/80">يبقى ذكرى للابد</p>
-                    </div>
-                </div>
-
-
-                <div class=" group relative rounded-3xl overflow-hidden">
-                    <img src="img/areen-logo.jpeg" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">باقات الورد الصناعي </h1>
-                        <p class="text-white/80">جمال واثر للابد</p>
-                    </div>
-                </div>
-
-                <div class="group relative  rounded-3xl overflow-hidden">
-                    <img src="img/areen-logo.jpeg" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">الأكسسوارات</h1>
-                        <p class="text-white/80">قطع انيقة جميلة</p>
-                    </div>
-                </div>
-                <div class="group relative  rounded-3xl overflow-hidden">
-                    <img src="img/areen-logo.jpeg" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">عطور نسائية</h1>
-                        <p class="text-white/80">روائح ساحرة</p>
-                    </div>
-                </div>
-                <div class="group relative  rounded-3xl overflow-hidden">
-                    <img src="img/areen-logo.jpeg" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">عطور رجالية</h1>
-                        <p class="text-white/80">اناقة راقية</p>
-                    </div>
-                </div>
-                <div class="group relative  rounded-3xl overflow-hidden">
-                    <img src="img/areen-logo.jpeg" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">باقات هدايا</h1>
-                        <p class="text-white/80">علب جاهزة بلمسة فاخرة</p>
-                    </div>
-                </div>
-                <div class="group relative  rounded-3xl overflow-hidden">
-                    <img src="img/areen-logo.jpeg" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">هدايا الطباعة</h1>
-                        <p class="text-white/80">لمسة شخصية بصورك</p>
-                    </div>
-                </div>
-                <div class="group relative  rounded-3xl overflow-hidden">
-                    <img src="img/areen-logo.jpeg" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">مجموعة التخرج</h1>
-                        <p class="text-white/80">احتفل بلحظاتك</p>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- الاكثر مبيعاً -->
@@ -219,71 +167,8 @@
                     <h2 class="text-4xl text-purple-900 font-bold">الأكثر مبيعاً</h2>
                 </div>
             </div>
-            <div class="w-full grid grid-cols-2 p-2 gap-3 md:grid-cols-3 lg:grid-cols-4  ">
-                <div
-                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
-                <div>
-                    <img src="img/pexels-zuzanna-hoffmann-1989959-31099775.jpg"  alt=""
-                        class="imgshop size-40 md:size-80 rounded-[50px] object-cover group-hover:scale-105 transition-all duration-500 ">
-                    <p
-                        class="absolute top-10 right-10 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
-                        الاكثر مبيعاَ</p>
-                </div>
-                <div class="p-4">
-                    <h2 class="titelshop text-2xl text-purple-900 font-medium">  ورد صناعي</h2>
-                    <p class="pshop text-gray-500">باقات ورد طبيعية </p>
-                </div>
-                <div class="flex justify-between p-3 ">
-                    <h2 class="price text-purple-900 font-bold text-xl">60 شيكل</h2>
-                    <button onclick="itemCard(this.parentElement.parentElement,this)"
-                         class="bg-purple-100 rounded-3xl w-32 h-10 text-xl font-bold group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
-
-                </div>
-            </div>
-
-
-            <div
-                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
-                <div>
-                    <img src="img/pexels-wendee-tan-515652-1246752.jpg"  alt=""
-                        class="imgshop size-40 md:size-80 rounded-[50px] object-cover group-hover:scale-105 transition-all duration-500 ">
-                    <p
-                        class="absolute top-10 right-10 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
-                        الاكثر مبيعاَ</p>
-                </div>
-                <div class="p-4">
-                    <h2 class="titelshop text-2xl text-purple-900 font-medium">بيبي فلور </h2>
-                    <p class="pshop text-gray-500">اجمل ما في الباقة
-                </div>
-                <div class="flex justify-between p-3 ">
-                    <h2 class="price text-purple-900 font-bold text-xl">20 شيكل</h2>
-                    <button onclick="itemCard(this.parentElement.parentElement,this)"
-                        class="bg-purple-100 rounded-3xl w-32 h-10 text-xl font-bold group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
-
-                </div>
-            </div>
-
-
-            <div
-                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
-                <div>
-                    <img src="img/pexels-madeinegypt-ca-121489142-10418012.jpg"  alt=""
-                        class="imgshop size-40 md:size-80 rounded-[50px] object-cover group-hover:scale-105 transition-all duration-500 ">
-                    <p
-                        class="absolute top-10 right-10 bg-purple-900 rounded-xl p-3 w-18 h-5 flex justify-center items-center text-white">
-                        الاكثر مبيعاَ</p>
-                </div>
-                <div class="p-4">
-                    <h2 class="titelshop text-2xl text-purple-900 font-medium">علبة هدايا فاخرة</h2>
-                    <p class="pshop text-gray-500">علبة هدايا جاهزة تحتوي على عطر، شمعة معطرة، وبطاقة تهنئة مطبوعة.
-                </div>
-                <div class="flex justify-between p-3 ">
-                    <h2 class="price text-purple-900 font-bold text-xl">120 شيكل</h2>
-                    <button onclick="itemCard(this.parentElement.parentElement,this)"
-                        class="bg-purple-100 rounded-3xl w-32 h-10 text-xl font-bold group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
-                </div>
-            </div>
-            </div>
+            <div id="allproductstar" class="w-full grid grid-cols-2 p-2 gap-3 md:grid-cols-3 lg:grid-cols-4  ">
+               
         </div>
         <!-- تجربة التسوق -->
         <div
