@@ -150,12 +150,42 @@ if (videoflooer) {
 }
 ////////////////////////////////////////////////////////
 
-let loginbtn = document.querySelector("#loginbtn")
-let lginusername = document.querySelector("#lginusername")
+// /////// phone login
+let loginbtnphone = document.querySelector("#loginbtnphone")
+let logoutbtnphone = document.querySelector("#logoutbtnphone")
 let username = localStorage.getItem("username")
-if (username && loginbtn && lginusername) {
+if (username && loginbtnphone && logoutbtnphone) {
+    loginbtnphone.remove()
+    loginusernamephone.innerHTML = username
+}
+else{
+    logoutbtnphone.remove()
+}
+logoutbtnphone.addEventListener("click", () => {
+    localStorage.removeItem("username")
+    setTimeout(() => {
+        window.location = "login.html"
+
+    }, 1000); 
+})
+// /////
+
+let lgoutbtn = document.querySelector("#lgoutbtn")
+let loginbtn = document.querySelector("#loginbtn")
+let loginusername = document.querySelector("#lginusername")
+if (username && loginbtn && loginusername) {
     loginbtn.remove()
-    lginusername.innerHTML = username
+    lgoutbtn.classList.add("md:block")
+    loginusername.innerHTML = username
+}
+if (lgoutbtn) {
+    lgoutbtn.addEventListener("click", () => {
+        localStorage.removeItem("username")
+
+        setTimeout(() => {
+            window.location = "login.html"
+        }, 1000)
+    })
 }
 // ///////////////////////// الاقسام المميزة
 
@@ -413,7 +443,7 @@ function productcard(item) {
                 class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
                 <div>
                     <img src="${item.imgproduct}"  alt=""
-                        class="imgshop size-40 md:size-80 rounded-[50px] object-cover group-hover:scale-105 transition-all duration-500 ">
+                        class="m-auto imgshop size-42 md:size-80 rounded-[50px] object-cover group-hover:scale-105 transition-all duration-500 ">
                    
                 </div>
                 <div class="p-4">
@@ -421,9 +451,9 @@ function productcard(item) {
                     <p class="pshop text-gray-500">${item.titel}</p>
                 </div>
                 <div class="flex justify-between p-3 ">
-                    <h2 class="price text-purple-900 font-bold text-xl">${item.price} شيكل</h2>
+                    <h2 class="mt-auto price text-purple-900 font-bold text-lg md:text-2xl">${item.price} شيكل</h2>
                     <button onclick="itemCard(this.parentElement.parentElement,this)"
-                         class=" transition-all duration-700 bg-purple-100 rounded-3xl w-32 h-10 text-xl font-bold group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                         class=" transition-all duration-700 bg-purple-100 rounded-3xl w-14 h-10 md:w-32 md:h-10 md:text-xl  group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
 
                 </div>
             </div>
@@ -448,9 +478,20 @@ function remocolor() {
     })
 }
 function addproduct() {
+    if (allproductstar) {
+        allproductstar.innerHTML = ""
 
-    let categoryURL =
-        new URLSearchParams(window.location.search).get("category")
+        product.map((item) => {
+            let p = productcard(item)
+
+            if (item.star) {
+                allproductstar.innerHTML += p
+            }
+
+        })
+    }
+
+    let categoryURL = new URLSearchParams(window.location.search).get("category")
 
     remocolor()
 
@@ -490,22 +531,22 @@ function addproduct() {
         allp.classList.remove("hover:bg-purple-200")
     }
 
-    // وبعدها كود عرض المنتجات
-if (allproduct) {
-    allproduct.innerHTML = ""
+    if (allproduct) {
+        allproduct.innerHTML = ""
 
-    product.map((item) => {
-        let p = productcard(item)
+        product.map((item) => {
+            let p = productcard(item)
 
-        if (categoryURL) {
-            if (item.category === categoryURL) {
+            if (categoryURL) {
+                if (item.category === categoryURL) {
+                    allproduct.innerHTML += p
+                }
+            } else {
                 allproduct.innerHTML += p
             }
-        } else {
-            allproduct.innerHTML += p
-        }
-    })
-}
+        })
+    }
+
 
     allp.addEventListener("click", () => {
         remocolor()
