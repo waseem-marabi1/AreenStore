@@ -1,4 +1,6 @@
-
+//
+//
+// زر التلفون 
 var btnmun = document.getElementById("btnmun")
 var liststayle = document.getElementById("listmubile")
 var btnhead = document.querySelectorAll(".btnhead")
@@ -40,88 +42,543 @@ document.querySelectorAll(".btnpage").forEach(button => {
     }
 });
 
-// اضافة للسلة
+
+//
+//
+//
+
+let allproductindex = document.querySelector("#allproductindex")
+
+// الاقسام المميزة
+class productsindex {
+    constructor(img, nameproduct, titel, category) {
+        this.img = img
+        this.nameproduct = nameproduct
+        this.titel = titel
+        this.category = category
+    }
+}
+
+let productindex = [
+    new productsindex("img/ساتان.jpg", "باقات الساتان", "يبقى ذكرى للأبد", "satan"),
+
+    new productsindex("img/صناعي.jpg", "باقات الورد الصناعي", "جمال واثر للابد", "Artificial"),
+
+    new productsindex("img/اكسسوارات1.jpg", "الأكسسوارات", "قطع انيقة جميلة", "accessories"),
+
+    new productsindex("img/عطرنسائي.jpg", "عطور نسائية", "روائح ساحرة"),
+
+    new productsindex("img/u'vv[hgd.jpg", "عطور رجالية", "اناقة راقية"),
+
+    new productsindex("img/هدايا.jpg", "باقات هدايا", "علب جاهزة بلمسة فاخرة", "gifts"),
+
+    new productsindex("img/طباعة.jpg", "هدايا الطباعة", "مسة شخصية بصورك", "Printedgifts"),
+
+    new productsindex("img/بكج تخرج.jpg", "مجموعة التخرج", "احتفل بلحظاتك", "Graduation")
+
+]
+function cardindex() {
+
+    if (allproductindex) {
+        productindex.map((item) => {
+            allproductindex.innerHTML += `<div  onclick="categoryFun('${item.category}')"
+             class="indexToShop group relative  rounded-3xl overflow-hidden">
+                    <img src="${item.img}" alt=""
+                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-5 right-5 text-right text-white">
+                        <h1 class="text-2xl font-bold">${item.nameproduct} </h1>
+                        <p class="text-white/80">${item.titel}</p>
+                    </div>
+                </div>
+`
+        })
+    }
+}
+cardindex()
+
+//  ننخزن النوع  مشان نعرف نوصللها 
+function categoryFun(category) {
+    localStorage.setItem("category", category)
+    window.location = "shop.html"
+
+}
+
+
+
+let allproduct = document.querySelector("#allproduct")
+let allproductstar = document.querySelector("#allproductstar")
+
+class products {
+    constructor(id, category, star, imgproduct, nameproduct, titel, price) {
+        this.id = id
+        this.category = category
+        this.star = star
+        this.imgproduct = imgproduct
+        this.nameproduct = nameproduct
+        this.titel = titel
+        this.price = price
+    }
+
+
+}
+
+let product = [
+    new products(1, "Graduation", true, "img/wesha7.jpg", "وشاح تخرج", "وشاح تخرج مميز ", 90),
+    new products(2, "satan", true, "img/ورد ساتان2.jpg", " باقة ساتان", "حجم كبير مع بيبي فلزر ", 115),
+    new products(3, "Artificial", true, "img/ورد صناعي.jpg", " باقة صناعي", "حجم وسط", 90),
+    new products(4, "Printedgifts", true, "img/بكج مصحف2.jpg", "بكج مصحف", "مصلى مصحف كاسة", 250),
+    new products(5, "satan", true, "img/وردساتان.jpg", " باقة ساتان", "حجم كبير مع وشاح وتل", 130),
+    new products(6, "gifts", false, "img/packj.jpg", "بكج سكتش", "هدية ورد وكاسة ودفتر سكتش", 150),
+    new products(7, "satan", false, "img/ledflooer.jpg", " باقة ساتان", "باقة ساتان مضيئة مع دب سكتش", 170),
+    new products(8, "Artificial", false, "img/وردة صناعي.jpg", " باقة صناعي", "حجم كبير", 120),
+    new products(9, "Printedgifts", false, "img/بكج مصحف1.jpg", "بكج مصحف", "مصحف ومصلى وباقة", 140),
+    new products(10, "Bridalbouquet", true, "img/مسكة.jpg", "مسكة", "مسكة مميزة", 130),
+    new products(11, "Graduation", false, "img/وشاح تخرج.jpg", "وشاح تخرج", "وشاح و طاقية تخرج", 100),
+    new products(12, "accessories", false, "img/اكسسوارات.jpg", "اكسسوارات", "شنطة سلسال سوارة ساعة", 250),
+    new products(13, "Graduation", true, "img/بكج تخرج.jpg", "بكج تخرج", "وشاح طاقية وردة جريدة", 150),
+    new products(14, "Artificial", false, "img/ورد صناعي1.jpg", " باقة صناعي", "باقة صناعي مع وشاح", 110),
+]
+// satan ورد ساتان
+// Artificial ورد صناعي
+// Graduation تخرج
+// gifts هدايا بكج
+// accessories اكسسوارات
+// Printedgifts بكج طباعة
+// Bridalbouquet مسكو عروس
+
+function productcard(item) {
+    return `
+                <div
+                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                <div>
+                    <img src="${item.imgproduct}"  alt=""
+                        class="m-auto imgshop size-42 md:size-80 rounded-[50px] object-cover group-hover:scale-105 transition-all duration-500 ">
+                   
+                </div>
+                <div class="p-4">
+                    <h2 class="titelshop text-2xl text-purple-900 font-medium">${item.nameproduct}</h2>
+                    <p class="pshop text-gray-500">${item.titel}</p>
+                </div>
+                <div class="flex justify-between p-3 ">
+                    <h2 class="mt-auto price text-purple-900 font-bold text-lg md:text-2xl">${item.price} <i class="fa-solid fa-shekel-sign text-sm"></i></h2>
+                    <button onclick="itemCard(${item.id})"
+                        id="btnShoping" class=" transition-all duration-700 bg-purple-100 rounded-3xl w-14 h-10 md:w-32 md:h-10 md:text-xl
+                          group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+
+                </div>
+            </div>
+`
+}
+
+
+let allp = document.querySelector("#allp")
+let satanp = document.querySelector("#satanp")
+let Artificialp = document.querySelector("#Artificialp")
+let giftsp = document.querySelector("#giftsp")
+let Printedgiftsp = document.querySelector("#Printedgiftsp")
+let Graduationp = document.querySelector("#Graduationp")
+let accessoriesp = document.querySelector("#accessoriesp")
+
+let thecolorJS = document.querySelectorAll(".thecolorJS")
+
+
+
+function remocolor() {
+    thecolorJS.forEach((btn) => {
+        btn.classList.remove("bg-purple-900")
+        btn.classList.remove("text-white")
+        btn.classList.add("hover:bg-purple-200")
+
+    })
+}
+function addproduct() {
+    if (allproductstar) {
+        allproductstar.innerHTML = ""
+        product.map((item) => {
+            let p = productcard(item)
+
+            if (item.star) {
+                allproductstar.innerHTML += p
+            }
+
+        })
+    }
+    if (allproduct) {
+        allproduct.innerHTML = ""
+        product.map((item) => {
+            let p = productcard(item)
+            if (item.category === localStorage.getItem("category")) {
+                allproduct.innerHTML += p
+            } else if (!localStorage.getItem("category")) {
+                allproduct.innerHTML += p
+                allp.classList.add("bg-purple-900")
+                allp.classList.add("text-white")
+                allp.classList.remove("hover:bg-purple-200")
+            }
+        })
+    }
+}
+function btnCategory(categ, btn) {
+    localStorage.removeItem("category")
+    remocolor()
+    btn.classList.add("bg-purple-900")
+    btn.classList.add("text-white")
+    btn.classList.remove("hover:bg-purple-200")
+
+    if (allproduct) {
+        allproduct.innerHTML = ""
+
+        product.map((item) => {
+            let p = productcard(item)
+
+            if (item.category == categ) {
+                allproduct.innerHTML += p
+            } else if (categ === "all") {
+                allproduct.innerHTML += p
+
+            }
+        })
+
+    }
+
+}
+addproduct();
+
+// 
+// 
+// البحثث 
+let search = document.querySelector("#search")
+let searchType = document.querySelector("#searchType")
+if (search && searchType) {
+    search.addEventListener("input", () => {
+        if (allproduct) {
+            allproduct.innerHTML = ""
+
+            product.map((item) => {
+                let p = productcard(item)
+                if (search.value === "") {
+                    allproduct.innerHTML += p
+                }
+                if (searchType.value === "Name" && item.nameproduct.includes(search.value)) {
+                    allproduct.innerHTML += p
+
+                } else if (searchType.value === "Price" && item.price <= (search.value)) {
+                    allproduct.innerHTML += p
+
+                }
+
+            })
+
+        }
+    })
+}
+//
+//
+// // اظهار السلة واخفائها
+
+let sideCart = document.querySelector("#sideCart")
+let canselbtn = document.querySelector("#canselbtn")
+let overlay = document.querySelector("#overlay")
+let theitemincadt = document.querySelector("#theitemincadt")
+let cart = JSON.parse(localStorage.getItem("cart")) || []
+let totalpricehtml = document.querySelector("#totalpricehtml")
+let totalpriceincart = document.querySelector("#totalpriceincart")
+let totalpriceincartf = document.querySelector("#totalpriceincartf")
+let totalprice = Number(localStorage.getItem("totalprice")) || 0
 function clickcarded() {
 
+    sideCart.classList.toggle("hidden")
+    overlay.classList.toggle("hidden")
+    document.body.classList.toggle("overflow-hidden")
+
+}
+canselbtn.addEventListener("click", () => {
+    sideCart.classList.add("hidden")
+    overlay.classList.add("hidden")
+    document.body.classList.remove("overflow-hidden")
+
+})
+overlay.addEventListener("click", () => {
+    sideCart.classList.add("hidden")
+    overlay.classList.add("hidden")
+    document.body.classList.remove("overflow-hidden")
 
 
-    if (arrcard.length > 0) {
-        window.location.href = "card.html"
-    } else {
-        window.location.href = "cardempty.html"
+})
 
+// اضافة المنتجات للسلة الجانبية 
+function productAddToSidCart(item) {
+
+    return `     <div class="flex gap-10  bg-gray-50 p-2 md:p-4 rounded-2xl shadow-sm shadow-gray-400 ">
+                <img src="${item.imgproduct}" class="size-20 md:size-28 rounded-lg" alt="">
+                <div class="m-auto">
+                    <h1 class="text-sm md:text-xl font-semibold">${item.nameproduct}</h1>
+                    <p class="text-sm md:text-lg">${item.price} </p>
+                </div>
+                <div class="m-auto flex flex-col ">
+                    <span class="flex gap-2 text-sm md:text-xl justify-center items-center ">
+                        <button onclick="Increase(${item.id})" id="Increase-${item.id}" class="bg-purple-300 rounded-full size-4 md:size-6 font-bold">+</button>
+                        <p id="counternumofproduct-${item.id}" class="">${item.quantity}</p>
+                        <button onclick="Decrease(${item.id})" id="Decrease-${item.id}" class="bg-purple-300 rounded-full size-4 md:size-6 font-bold">-</button>
+                    </span>
+                    <span  class="flex flex-col justify-center text-center  text-sm md:text-xl mt-2">
+                        <p id="newpriceproduct-${item.id}">${item.price * item.quantity}</p>
+                    </span>
+                </div> 
+                <button  onclick="deleteFromCart(${item.id})" class="text-lg md:text-xl hover:text-red-600"><i class="fa-solid fa-trash-can"></i></button>
+            </div>           
+                
+`
+}
+
+function updatecart() {
+    theitemincadt.innerHTML = ""
+
+    if (cart.length === 0) {
+
+        theitemincadt.innerHTML = `
+            <h1 class="text-center text-xl">
+                السلة فارغة
+            </h1>
+        `
+    }
+    else {
+        theitemincadt.innerHTML = ""
 
     }
+    cart.map((item) => {
+        if (!item.quantity) {
+            item.quantity = 1
+        }
+        theitemincadt.innerHTML += productAddToSidCart(item)
+    })
+}
+updatecart()
+printtotalprice()
+function itemCard(id) {
+    let found = false
+    cart.map((item) => {
+        if (item.id === id) {
+            found = true
+            item.quantity = item.quantity + 1
+            let counternumofproduct =
+                document.querySelector(`#counternumofproduct-${item.id}`)
+            let newpriceproduct =
+                document.querySelector(`#newpriceproduct-${item.id}`)
+            counternumofproduct.innerHTML = item.quantity
+            newpriceproduct.innerHTML =
+                item.price * item.quantity
+            totalprice += item.price
+            localStorage.setItem("totalprice", totalprice)
+
+        }
+    })
+    if (found === false) {
+        product.map((item) => {
+            if (item.id === id) {
+                item.quantity = 1
+                cart.push(item)
+                updatecart()
+                totalprice += item.price
+                localStorage.setItem("totalprice", totalprice)
+                if (document.querySelector("#pagecard")) {
+                    addToPageCard()
+                }
+            }
+        })
+    }
+
+    printtotalprice()
+    localStorage.setItem("cart", JSON.stringify(cart))
+
+}
+// المجموع وطباعتها 
+function printtotalprice() {
+    if (totalpricehtml) {
+
+        totalpricehtml.innerHTML = "المجموع : " + totalprice + " " + `<i class="fa-solid fa-shekel-sign text-sm"></i>`
+    }
+    if (totalpriceincart) {
+
+        totalpriceincart.innerHTML = `<i class="fa-solid fa-shekel-sign text-lg"></i>` + " " + totalprice
+    }
+    if (totalpriceincartf) {
+
+    totalpriceincartf.innerHTML = `<i class="fa-solid fa-shekel-sign text-sm"></i>` + " " + totalprice
+} 
+}
+
+
+
+
+function Increase(id) {
+    product.map((item) => {
+        let Increase = document.querySelector(`#Increase-${item.id}`)
+        let counternumofproduct = document.querySelector(`#counternumofproduct-${item.id}`)
+        let newpriceproduct = document.querySelector(`#newpriceproduct-${item.id}`)
+        if (Increase && counternumofproduct && item.id === id) {
+            counternumofproduct.innerHTML =
+                Number(counternumofproduct.innerHTML) + 1
+            newpriceproduct.innerHTML =
+                Number(newpriceproduct.innerHTML) + item.price
+            cart.map((cartitem) => {
+
+                if (cartitem.id === id) {
+
+                    cartitem.quantity =
+                        Number(cartitem.quantity) + 1
+                    totalprice += item.price
+                    localStorage.setItem("totalprice", totalprice)
+
+                    if (document.querySelector("#pagecard")) {
+                        addToPageCard()
+                    }
+
+                }
+            })
+            localStorage.setItem("cart", JSON.stringify(cart))
+        }
+    })
+    printtotalprice()
+}
+function Decrease(id) {
+
+    product.map((item) => {
+
+        let Decrease = document.querySelector(`#Decrease-${item.id}`)
+        let counternumofproduct = document.querySelector(`#counternumofproduct-${item.id}`)
+        let newpriceproduct = document.querySelector(`#newpriceproduct-${item.id}`)
+
+        if (Decrease && counternumofproduct && item.id === id) {
+
+            if (Number(counternumofproduct.innerHTML) > 1) {
+
+                counternumofproduct.innerHTML =
+                    Number(counternumofproduct.innerHTML) - 1
+
+                newpriceproduct.innerHTML =
+                    Number(newpriceproduct.innerHTML) - item.price
+
+                cart.map((cartitem) => {
+
+                    if (cartitem.id === id) {
+
+                        cartitem.quantity =
+                            Number(cartitem.quantity) - 1
+                        totalprice -= item.price
+                        localStorage.setItem("totalprice", totalprice)
+
+                        if (document.querySelector("#pagecard")) {
+                            addToPageCard()
+                        }
+                    }
+
+                })
+
+                localStorage.setItem("cart", JSON.stringify(cart))
+
+            }
+        }
+    })
+
+printtotalprice() 
+}
+// 
+// 
+//  حذف المنتج من السلة 
+function deleteFromCart(id) {
+
+    cart.map((item, index) => {
+
+        if (item.id === id) {
+
+
+            for (let index = 0; index < item.quantity; index++) {
+                totalprice -= item.price
+                localStorage.setItem("totalprice", totalprice)
+
+            }
+            cart.splice(index, 1)
+
+            localStorage.setItem("cart", JSON.stringify(cart))
+        }
+
+    })
+
+    theitemincadt.innerHTML = ""
+
+    updatecart()
+    if (document.querySelector("#pagecard")) {
+        addToPageCard()
+    }
+    totalpricehtml.innerHTML = "المجموع : " + totalprice
 
 }
 
-var countercard = document.getElementById("countercard")
-
-var arrcard = JSON.parse(localStorage.getItem("arrcard")) || [];
-var carded = document.getElementById("carded")
-
-countercard.textContent = arrcard.length;
 
 
-function itemCard(item, btn) {
-    var product = {
-        img: item.querySelector(".imgshop").src,
-        pshop: item.querySelector(".pshop").textContent,
-        titelshop: item.querySelector(".titelshop").textContent,
-        price: item.querySelector(".price").textContent
-    }
-
-    arrcard.push(product)
-    localStorage.setItem("arrcard", JSON.stringify(arrcard));
-    countercard.textContent = arrcard.length;
-
-}
+// //
+// //
+// //
+// //
 
 
 
-function AddToCard() {
-    var carded = document.getElementById("carded")
-    carded.innerHTML = "";
+
+// //
+// //
+// //
+// // اضافة للسلة الجانبية
+// //
+// // id: 1,
+// //         category: "Graduation",
+// //         star: true,
+// //         imgproduct: "img/wesha7.jpg",
+// //         nameproduct: "وشاح تخرج",
+// //         titel: "وشاح تخرج مميز ",
+// //         price: 90
+// let btnShoping = document.querySelector("#btnShoping")
+// let theitemincadt = document.querySelector("#theitemincadt")
+// function itemCard() {
+//     product.id
+//     product.map((item) => {
+
+//     })
+// }
 
 
 
-    for (let i = 0; i < arrcard.length; i++) {
-        carded.innerHTML += ` <div id="${i}" class="bg-white shadow-gray shadow-md flex  items-center   p-3 gap-2 rounded-2xl">
-                    <div class=""><img src="${arrcard[i].img}" class="size-[100px] rounded-2xl " alt=""></div>
-                    <div class="w-full">
-                        <div class="px-3">
-                            <div class="flex justify-between ">
-                                <h2 class="font-bold text-purple-950 text-xl">${arrcard[i].titelshop}</h2> <i
-                                    onclick="removeCard(${[i]})" class="fa-regular fa-trash-can hover:text-red-500 cursor-pointer"></i>
-                            </div>
-                            <p class="text-gray-600  ">${arrcard[i].pshop}</p>
-                        </div>
-                        <div class="  flex  justify-between  px-3 mt-4">
-                            <div>- 1 +</div>
-                            <h2 class="text-gray-600  text-2xl font-bold ">${arrcard[i].price}</h2>
-                        </div>
-                    </div>
-                </div>`
-        console.log(1)
-    }
-}
-if (document.getElementById("carded")) {
-    AddToCard();
+
+// //
+// //
+// //
 
 
-} function removeCard(id) {
-    arrcard.splice(id, 1);
-    localStorage.setItem("arrcard", JSON.stringify(arrcard))
-    if (arrcard.length === 0) {
-        clickcarded()
-    }
-    countercard.textContent = arrcard.length;
 
-    AddToCard();
 
-}
 
-//  الفيديوهات والتحويل بينهن 
+
+
+// carded.innerHTML += ` <div id="${i}" class="bg-white shadow-gray shadow-md flex  items-center   p-3 gap-2 rounded-2xl">
+//                     <div class=""><img src="${arrcard[i].img}" class="size-[100px] rounded-2xl " alt=""></div>
+//                     <div class="w-full">
+//                         <div class="px-3">
+//                             <div class="flex justify-between ">
+//                                 <h2 class="font-bold text-purple-950 text-xl">${arrcard[i].titelshop}</h2> <i
+//                                     onclick="removeCard(${[i]})" class="fa-regular fa-trash-can hover:text-red-500 cursor-pointer"></i>
+//                             </div>
+//                             <p class="text-gray-600  ">${arrcard[i].pshop}</p>
+//                         </div>
+//                         <div class="  flex  justify-between  px-3 mt-4">
+//                             <div>- 1 +</div>
+//                             <h2 class="text-gray-600  text-2xl font-bold ">${arrcard[i].price}</h2>
+//                         </div>
+//                     </div>
+//                 </div>`
+// console.log(1)
+
+//  الفيديوهات والتحويل بينهن
 
 var video = [
     "img/videoflooer.mp4",
@@ -148,7 +605,7 @@ if (videoflooer) {
         videoflooer.play()
     })
 }
-////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////
 
 // /////// phone login
 let loginbtnphone = document.querySelector("#loginbtnphone")
@@ -158,7 +615,7 @@ if (username && loginbtnphone && logoutbtnphone) {
     loginbtnphone.remove()
     loginusernamephone.innerHTML = username
 }
-else{
+else {
     logoutbtnphone.remove()
 }
 logoutbtnphone.addEventListener("click", () => {
@@ -166,7 +623,7 @@ logoutbtnphone.addEventListener("click", () => {
     setTimeout(() => {
         window.location = "login.html"
 
-    }, 1000); 
+    }, 1000);
 })
 // /////
 
@@ -187,482 +644,5 @@ if (lgoutbtn) {
         }, 1000)
     })
 }
-// ///////////////////////// الاقسام المميزة
+// // ///////////////////////// الاقسام المميزة
 
-
-let allproductindex = document.querySelector("#allproductindex")
-let productindex = [
-
-    {
-        img: "img/ساتان.jpg",
-        nameproduct: "باقات الساتان",
-        titel: "يبقى ذكرى للأبد",
-        category: "satan",
-
-    },
-    {
-        img: "img/صناعي.jpg",
-        nameproduct: "باقات الورد الصناعي ",
-        titel: "جمال واثر للابد",
-        category: "Artificial",
-
-    },
-    {
-        img: "img/اكسسوارات1.jpg",
-        nameproduct: "الأكسسوارات ",
-        titel: " قطع انيقة جميلة",
-        category: "accessories",
-
-    },
-    {
-        img: "img/عطرنسائي.jpg",
-        nameproduct: " عطور نسائية",
-        titel: "روائح ساحرة",
-    },
-    {
-        img: "img/u'vv[hgd.jpg",
-        nameproduct: "عطور رجالية ",
-        titel: "  اناقة راقية ",
-    },
-
-    {
-        img: "img/هدايا.jpg",
-        nameproduct: " باقات هدايا ",
-        titel: " علب جاهزة بلمسة فاخرة ",
-        category: "gifts",
-
-    },
-    {
-        img: "img/طباعة.jpg",
-        nameproduct: "هدايا الطباعة ",
-        titel: " مسة شخصية بصورك ",
-        category: "Printedgifts",
-
-    }
-    ,
-    {
-        img: "img/بكج تخرج.jpg",
-        nameproduct: "مجموعة التخرج ",
-        titel: " احتفل بلحظاتك ",
-        category: "Graduation",
-
-    }
-
-]
-function cardindex() {
-
-    if (allproductindex) {
-        productindex.map((item) => {
-            allproductindex.innerHTML += `<div  onclick="window.location='shop.html?category=${item.category}'"
-             class="indexToShop group relative  rounded-3xl overflow-hidden">
-                    <img src="${item.img}" alt=""
-                        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-5 right-5 text-right text-white">
-                        <h1 class="text-2xl font-bold">${item.nameproduct} </h1>
-                        <p class="text-white/80">${item.titel}</p>
-                    </div>
-                </div>
-`
-        })
-    }
-}
-cardindex()
-
-
-
-let allproduct = document.querySelector("#allproduct")
-let allproductstar = document.querySelector("#allproductstar")
-
-let product = [
-    {
-        id: 1,
-        category: "Graduation",
-        star: true,
-        imgproduct: "img/wesha7.jpg",
-        nameproduct: "وشاح تخرج",
-        titel: "وشاح تخرج مميز ",
-        price: 90
-
-    }
-
-    ,
-    {
-        id: 2,
-        category: "satan",
-        star: true,
-        imgproduct: "img/ورد ساتان2.jpg",
-        nameproduct: " باقة ساتان",
-        titel: "حجم كبير مع بيبي فلزر ",
-        price: 115
-
-    },
-    {
-        id: 3,
-        category: "Artificial",
-        star: true,
-        imgproduct: "img/ورد صناعي.jpg",
-        nameproduct: " باقة صناعي",
-        titel: "حجم وسط    ",
-        price: 90
-
-    },
-    {
-        id: 4,
-        category: "Printedgifts",
-        star: true,
-        imgproduct: "img/بكج مصحف2.jpg",
-        nameproduct: "بكج مصحف ",
-        titel: "مصلى مصحف كاسة ",
-        price: 250
-
-    }
-    ,
-
-    {
-        id: 5,
-        category: "satan",
-        star: true,
-        imgproduct: "img/وردساتان.jpg",
-        nameproduct: " باقة ساتان",
-        titel: " حجم كبير مع وشاح وتل",
-        price: 130
-
-    }
-    ,
-    {
-        id: 6,
-        category: "gifts",
-        star: false,
-        imgproduct: "img/packj.jpg",
-        nameproduct: "بكج سكتش ",
-        titel: "هدية ورد وكاسة ودفتر سكتش",
-        price: 150
-
-    }
-    ,
-    {
-        id: 7,
-        category: "satan",
-        star: false,
-        imgproduct: "img/ledflooer.jpg",
-        nameproduct: " باقة ساتان ",
-        titel: "باقة ساتان مضيئة مع دب سكتش",
-        price: 170
-
-    }
-    ,
-    {
-        id: 8,
-        category: "Artificial",
-        star: false,
-        imgproduct: "img/وردة صناعي.jpg",
-        nameproduct: " باقة صناعي ",
-        titel: "حجم كبير",
-        price: 120
-
-    }
-    ,
-    {
-        id: 9,
-        category: "Printedgifts",
-        star: false,
-        imgproduct: "img/بكج مصحف1.jpg",
-        nameproduct: "بكج مصحف",
-        titel: "مصحف ومصلى وباقة",
-        price: 140
-
-    },
-    {
-        id: 10,
-        category: "Bridalbouquet",
-        star: true,
-        imgproduct: "img/مسكة.jpg",
-        nameproduct: "مسكة ",
-        titel: "مسكة مميزة",
-        price: 130
-
-    }
-    ,
-    {
-        id: 11,
-        category: "Graduation",
-        star: false,
-        imgproduct: "img/وشاح تخرج.jpg",
-        nameproduct: " وشاح تخرج ",
-        titel: "وشاح و طاقية تخرج",
-        price: 100
-
-    }
-    ,
-    {
-        id: 12,
-        category: "accessories",
-        star: false,
-        imgproduct: "img/اكسسوارات.jpg",
-        nameproduct: "اكسسوارات",
-        titel: "شنطة سلسال سوارة ساعة ",
-        price: 250
-
-    }
-    ,
-    {
-        id: 13,
-        category: "Graduation",
-        star: true,
-        imgproduct: "img/بكج تخرج.jpg",
-        nameproduct: "بكج تخرج",
-        titel: "وشاح طاقية وردة جريدة ",
-        price: 150
-
-    }
-    ,
-    {
-        id: 14,
-        category: "Artificial",
-        star: false,
-        imgproduct: "img/ورد صناعي1.jpg",
-        nameproduct: " باقة صناعي",
-        titel: "باقة صناعي مع وشاح",
-        price: 110
-
-    }
-
-]
-// satan ورد ساتان
-// Artificial ورد صناعي
-// Graduation تخرج
-// gifts هدايا بكج
-// accessories اكسسوارات
-// Printedgifts بكج طباعة
-// Bridalbouquet مسكو عروس
-
-function productcard(item) {
-    return `
-                <div
-                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
-                <div>
-                    <img src="${item.imgproduct}"  alt=""
-                        class="m-auto imgshop size-42 md:size-80 rounded-[50px] object-cover group-hover:scale-105 transition-all duration-500 ">
-                   
-                </div>
-                <div class="p-4">
-                    <h2 class="titelshop text-2xl text-purple-900 font-medium">${item.nameproduct}</h2>
-                    <p class="pshop text-gray-500">${item.titel}</p>
-                </div>
-                <div class="flex justify-between p-3 ">
-                    <h2 class="mt-auto price text-purple-900 font-bold text-lg md:text-2xl">${item.price} شيكل</h2>
-                    <button onclick="itemCard(this.parentElement.parentElement,this)"
-                         class=" transition-all duration-700 bg-purple-100 rounded-3xl w-14 h-10 md:w-32 md:h-10 md:text-xl  group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
-
-                </div>
-            </div>
-`
-}
-
-
-let allp = document.querySelector("#allp")
-let satanp = document.querySelector("#satanp")
-let Artificialp = document.querySelector("#Artificialp")
-let giftsp = document.querySelector("#giftsp")
-let Printedgiftsp = document.querySelector("#Printedgiftsp")
-let Graduationp = document.querySelector("#Graduationp")
-let accessoriesp = document.querySelector("#accessoriesp")
-let thecolorJS = document.querySelectorAll(".thecolorJS")
-function remocolor() {
-    thecolorJS.forEach((btn) => {
-        btn.classList.remove("bg-purple-900")
-        btn.classList.remove("text-white")
-        btn.classList.add("hover:bg-purple-200")
-
-    })
-}
-function addproduct() {
-    if (allproductstar) {
-        allproductstar.innerHTML = ""
-
-        product.map((item) => {
-            let p = productcard(item)
-
-            if (item.star) {
-                allproductstar.innerHTML += p
-            }
-
-        })
-    }
-
-    let categoryURL = new URLSearchParams(window.location.search).get("category")
-
-    remocolor()
-
-    if (categoryURL === "satan") {
-        satanp.classList.add("bg-purple-900")
-        satanp.classList.add("text-white")
-        satanp.classList.remove("hover:bg-purple-200")
-    }
-    else if (categoryURL === "Artificial") {
-        Artificialp.classList.add("bg-purple-900")
-        Artificialp.classList.add("text-white")
-        Artificialp.classList.remove("hover:bg-purple-200")
-    }
-    else if (categoryURL === "gifts") {
-        giftsp.classList.add("bg-purple-900")
-        giftsp.classList.add("text-white")
-        giftsp.classList.remove("hover:bg-purple-200")
-    }
-    else if (categoryURL === "Printedgifts") {
-        Printedgiftsp.classList.add("bg-purple-900")
-        Printedgiftsp.classList.add("text-white")
-        Printedgiftsp.classList.remove("hover:bg-purple-200")
-    }
-    else if (categoryURL === "Graduation") {
-        Graduationp.classList.add("bg-purple-900")
-        Graduationp.classList.add("text-white")
-        Graduationp.classList.remove("hover:bg-purple-200")
-    }
-    else if (categoryURL === "accessories") {
-        accessoriesp.classList.add("bg-purple-900")
-        accessoriesp.classList.add("text-white")
-        accessoriesp.classList.remove("hover:bg-purple-200")
-    }
-    else {
-        allp.classList.add("bg-purple-900")
-        allp.classList.add("text-white")
-        allp.classList.remove("hover:bg-purple-200")
-    }
-
-    if (allproduct) {
-        allproduct.innerHTML = ""
-
-        product.map((item) => {
-            let p = productcard(item)
-
-            if (categoryURL) {
-                if (item.category === categoryURL) {
-                    allproduct.innerHTML += p
-                }
-            } else {
-                allproduct.innerHTML += p
-            }
-        })
-    }
-
-
-    allp.addEventListener("click", () => {
-        remocolor()
-        allp.classList.add("bg-purple-900")
-        allp.classList.add("text-white")
-        allp.classList.remove("hover:bg-purple-200")
-
-        if (allproduct) {
-            allproduct.innerHTML = ""
-        }
-        product.map((item) => {
-            let p = productcard(item)
-            allproduct.innerHTML += p
-        })
-    })
-    satanp.addEventListener("click", () => {
-        remocolor()
-        satanp.classList.add("bg-purple-900")
-        satanp.classList.add("text-white")
-        satanp.classList.remove("hover:bg-purple-200")
-        if (allproduct) {
-            allproduct.innerHTML = ""
-        }
-        product.map((item) => {
-            let p = productcard(item)
-            if (item.category === "satan") {
-                allproduct.innerHTML += p
-            }
-
-        })
-    })
-    Artificialp.addEventListener("click", () => {
-        remocolor()
-        Artificialp.classList.add("bg-purple-900")
-        Artificialp.classList.add("text-white")
-        Artificialp.classList.remove("hover:bg-purple-200")
-        if (allproduct) {
-            allproduct.innerHTML = ""
-        }
-        product.map((item) => {
-            let p = productcard(item)
-            if (item.category === "Artificial") {
-                allproduct.innerHTML += p
-            }
-
-        })
-    })
-    giftsp.addEventListener("click", () => {
-        remocolor()
-        giftsp.classList.add("bg-purple-900")
-        giftsp.classList.add("text-white")
-        giftsp.classList.remove("hover:bg-purple-200")
-        if (allproduct) {
-            allproduct.innerHTML = ""
-        }
-        product.map((item) => {
-            let p = productcard(item)
-            if (item.category === "gifts") {
-                allproduct.innerHTML += p
-            }
-
-        })
-    })
-    Printedgiftsp.addEventListener("click", () => {
-        remocolor()
-        Printedgiftsp.classList.add("bg-purple-900")
-        Printedgiftsp.classList.add("text-white")
-        Printedgiftsp.classList.remove("hover:bg-purple-200")
-        if (allproduct) {
-            allproduct.innerHTML = ""
-        }
-        product.map((item) => {
-            let p = productcard(item)
-            if (item.category === "Printedgifts") {
-                allproduct.innerHTML += p
-            }
-
-        })
-    })
-    Graduationp.addEventListener("click", () => {
-        remocolor()
-        Graduationp.classList.add("bg-purple-900")
-        Graduationp.classList.add("text-white")
-        Graduationp.classList.remove("hover:bg-purple-200")
-        if (allproduct) {
-            allproduct.innerHTML = ""
-        }
-        product.map((item) => {
-            let p = productcard(item)
-            if (item.category === "Graduation") {
-                allproduct.innerHTML += p
-            }
-
-        })
-    })
-    accessoriesp.addEventListener("click", () => {
-        remocolor()
-        accessoriesp.classList.add("bg-purple-900")
-        accessoriesp.classList.add("text-white")
-        accessoriesp.classList.remove("hover:bg-purple-200")
-        if (allproduct) {
-            allproduct.innerHTML = ""
-        }
-        product.map((item) => {
-            let p = productcard(item)
-            if (item.category === "accessories") {
-                allproduct.innerHTML += p
-            }
-
-        })
-    })
-
-
-
-
-}
-
-
-addproduct();

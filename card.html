@@ -95,12 +95,32 @@
     </div>
 
 
-    <!-- end head -->
+   
 
 
+ <!-- سلة المشترايات الجانبية  -->
+    <div id="overlay" class="hidden fixed inset-0 bg-black/40  z-40">
+    </div>
 
+    <div id="sideCart"
+        class="z-50 rounded-3xl hidden flex w-[50vh] md:w-[100vh] flex-col space-y-4 p-4 md:p-10 bg-white border-2 border-gray-400  fixed top-20 right-2 max-h-[80vh] overflow-y-auto"">
+        <div class=" flex ">
+            <h1 class=" text-2xl mx-auto font-bold">سلة المشتريات </h1>
+        <button id="canselbtn"><i class="fa-regular fa-circle-xmark text-3xl hover:text-red-600 "></i></button>
+    </div>
+    <div id="theitemincadt"  class="flex flex-col-reverse gap-4">
+
+    </div>
+    <p id="totalpricehtml" class="text-2xl font-semibold"></p>
+    <a href="card.html" class="text-center bg-purple-200 rounded-lg py-2 hover:bg-purple-300">الذهاب للسلة</a>
+    </div>
+ <!-- end head -->
     <!--  -->
     <!--  -->
+    <!--  -->
+    <!--  -->
+
+    <div id="pagecard">
     <div class=" pt-40 p-10  bg-gradient-to-b from-purple-100/20 via-purple-100 to-white">
         <h1 class="font-bold text-purple-950 text-6xl mb-5">سلة التسوق </h1>
         <div class=" grid grid-cols-1 gap-y-4 lg:grid-cols-2 lg:gap-x-3">
@@ -111,13 +131,13 @@
 
             </div>
             <!--  -->
-            <div class="bg-white shadow-gray shadow-md mt-7 lg:mt-0 p-4 rounded-2xl">
+            <div class=" bg-white shadow-gray shadow-md mt-7 lg:mt-0 p-4 rounded-2xl">
                 <div>
                     <h1 class="font-bold text-purple-950 text-xl">ملخص الطلب</h1>
                     <div class="flex flex-col space-y-1 mt-3">
                         <span class="flex justify-between ">
                             <p class="text-lg text-gray-600">مجموع الفرعي</p>
-                            <p class="text-lg">120 ش</p>
+                            <p id="totalpriceincartf" class="text-lg"></p>
                         </span>
                         <span class="flex justify-between ">
                             <p>التوصيل</p>
@@ -126,11 +146,11 @@
                         <hr>
                         <span class="flex justify-between pt-2">
                             <p class="font-bold text-purple-950 text-xl">الاجمالي</p>
-                            <p class="font-bold text-purple-950 text-2xl">120ش</p>
+                            <p id="totalpriceincart" class="font-bold text-purple-950 text-2xl"></p>
                         </span>
                     </div>
                 </div>
-                <div class="flex flex-col justify-center items-center p-4 space-y-2"><a href=""
+                <div class="flex flex-col justify-center items-center p-4 space-y-2"><a href="" onclick="sendWhatsApp()"
                         class="hover:bg-purple-950/90 bg-purple-950 w-full h-10 text-white flex rounded-2xl text-xl items-center justify-center">اتمام
                         الطلب</a>
                     <a href="shop.html"
@@ -140,6 +160,7 @@
             </div>
 
         </div>
+    </div>
     </div>
      <!-- floot -->
          <div class="bg-gradient-to-t via-purple-200/50 from-purple-200/60 to-white">
@@ -233,8 +254,11 @@
                     href="https://www.linkedin.com/in/waseem-marabi-b17b06326/" target="_blank"
                     class="text-purple-700 font-bold"> waseem mrabi</a> </p>
         </div>
-        </div>
-    <script src="js/scrept.js"></script>
+        </div>   
+         <script src="js/scrept.js"></script>
+
+        <script src="js/cart.js"></script>
+    
 </body>
 
 </html>
