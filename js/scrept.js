@@ -286,6 +286,8 @@ let totalpricehtml = document.querySelector("#totalpricehtml")
 let totalpriceincart = document.querySelector("#totalpriceincart")
 let totalpriceincartf = document.querySelector("#totalpriceincartf")
 let totalprice = Number(localStorage.getItem("totalprice")) || 0
+let countercard = document.querySelector("#countercard")
+
 function clickcarded() {
 
     sideCart.classList.toggle("hidden")
@@ -393,8 +395,24 @@ function itemCard(id) {
     localStorage.setItem("cart", JSON.stringify(cart))
 
 }
+// كاونتر 
+
+function updateCartCounter() {
+
+    let counter = 0
+
+    cart.map((item) => {
+        counter += item.quantity
+    })
+
+    if (countercard) {
+        countercard.innerHTML = counter
+    }
+}
+
 // المجموع وطباعتها 
 function printtotalprice() {
+
     if (totalpricehtml) {
 
         totalpricehtml.innerHTML = "المجموع : " + totalprice + " " + `<i class="fa-solid fa-shekel-sign text-sm"></i>`
@@ -407,6 +425,7 @@ function printtotalprice() {
 
     totalpriceincartf.innerHTML = `<i class="fa-solid fa-shekel-sign text-sm"></i>` + " " + totalprice
 } 
+updateCartCounter()
 }
 
 
@@ -512,10 +531,8 @@ function deleteFromCart(id) {
     if (document.querySelector("#pagecard")) {
         addToPageCard()
     }
-    totalpricehtml.innerHTML = "المجموع : " + totalprice
-
+printtotalprice()
 }
-
 
 
 // //
