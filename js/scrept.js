@@ -125,7 +125,7 @@ class products {
 
 let product = [
     new products(1, "Graduation", true, "img/wesha7.jpg", "وشاح تخرج", "وشاح تخرج مميز ", 90),
-    new products(2, "satan", true, "img/ورد ساتان2.jpg", " باقة ساتان", "حجم كبير مع بيبي فلزر ", 115),
+    new products(2, "satan", true, "img/ورد ساتان2.jpg", " باقة ساتان", "حجم كبير مع بيبي فلور ", 115),
     new products(3, "Artificial", true, "img/ورد صناعي.jpg", " باقة صناعي", "حجم وسط", 90),
     new products(4, "Printedgifts", true, "img/بكج مصحف2.jpg", "بكج مصحف", "مصلى مصحف كاسة", 250),
     new products(5, "satan", true, "img/وردساتان.jpg", " باقة ساتان", "حجم كبير مع وشاح وتل", 130),
@@ -134,10 +134,23 @@ let product = [
     new products(8, "Artificial", false, "img/وردة صناعي.jpg", " باقة صناعي", "حجم كبير", 120),
     new products(9, "Printedgifts", false, "img/بكج مصحف1.jpg", "بكج مصحف", "مصحف ومصلى وباقة", 140),
     new products(10, "Bridalbouquet", true, "img/مسكة.jpg", "مسكة", "مسكة مميزة", 130),
-    new products(11, "Graduation", false, "img/وشاح تخرج.jpg", "وشاح تخرج", "وشاح و طاقية تخرج", 100),
-    new products(12, "accessories", false, "img/اكسسوارات.jpg", "اكسسوارات", "شنطة سلسال سوارة ساعة", 250),
-    new products(13, "Graduation", true, "img/بكج تخرج.jpg", "بكج تخرج", "وشاح طاقية وردة جريدة", 150),
-    new products(14, "Artificial", false, "img/ورد صناعي1.jpg", " باقة صناعي", "باقة صناعي مع وشاح", 110),
+    new products(11, "satan", false, "img/satan1.jpg", " باقة ساتان", "باقة صناعي مع وشاحاقة حجم صغير ٥٠ شيكل (١٥ وردة  مع عبارة ١٠)", 60),
+    new products(12, "Graduation", false, "img/وشاح تخرج.jpg", "وشاح تخرج", "وشاح و طاقية تخرج", 100),
+    new products(13, "accessories", false, "img/اكسسوارات.jpg", "اكسسوارات", "شنطة سلسال سوارة ساعة", 250),
+    new products(14, "Graduation", true, "img/بكج تخرج.jpg", "بكج تخرج", "وشاح طاقية وردة جريدة", 150),
+    new products(15, "Artificial", false, "img/ورد صناعي1.jpg", " باقة صناعي", "باقة ساتان مع وشاح", 110),
+    new products(16, "gifts", false, "img/mekap.jpg", "  باقة ميكب ", "باقة ميكب بجودة عالية", 200),
+    new products(17, "satan", false, "img/satan2.jpg", " باقة ساتان", " باقة ساتان حجم وسط (20وردة)", 80),
+    new products(18, "satan", false, "img/boxflooer.jpg", " بوكس ورد", "بوكس ساتان حجم صغير", 60),
+    new products(19, "satan", false, "img/boxflooer1.jpg", " بوكس ورد", " بوكس ساتان حجم كبير", 100),
+    new products(20, "gifts", false, "img/giftsatanmag.jpg", "هدية باللون الازرق ", "باقة ورد  دب ستيتش كاسة ماسك وجه", 80),
+    new products(21, "satan", true, "img/khtopa.jpg", " باقة ساتان خطوبة", "باقة خطوبة حجم كبير  ( ٣٥ وردة) مع وشاح ١٠", 110),
+    new products(22, "satan", true, "img/khtopa2.jpg", " باقة ساتان خطوبة", "باقة خطوبة حجم صغير  ( ١٥ وردة)  اضافات بيبي فلور ١٠  /  عبارة ١٠", 70),
+    new products(23, "gifts", false, "img/mom.jpg", "هدية ام", "هدية ام كفر نلفون وكاسة ", 50),
+    new products(24, "satan", true, "img/toze3t.jpg", " توزيعات ورد", " توزيعات ورد  ", 3),
+
+
+
 ]
 // satan ورد ساتان
 // Artificial ورد صناعي
@@ -147,10 +160,28 @@ let product = [
 // Printedgifts بكج طباعة
 // Bridalbouquet مسكو عروس
 
+// الاضافة للسلة اشعار 
+function massegAddToCart() {
+    successMessage = document.querySelector(".successMessage")
+
+    successMessage.classList.add("ShowMessage")
+    successMessage.classList.remove("hiddenMessage")
+
+    setTimeout(() => {
+        successMessage.classList.add("hiddenMessage")
+        successMessage.classList.remove("ShowMessage")
+
+    }, 1500)
+}
+
+// //
+// //
+// //
+// //
 function productcard(item) {
     return `
                 <div
-                class="group relative rounded-3xl bg-white shadow-md shadow-black p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
+                class="group flex flex-col h-full relative rounded-3xl bg-white shadow-lg shadow-gray  p-3 hover:-translate-y-2 transition-all duration-700 cursor-pointer">
                 <div>
                     <img src="${item.imgproduct}"  alt=""
                         class="m-auto imgshop size-42 md:size-80 rounded-[50px] object-cover group-hover:scale-105 transition-all duration-500 ">
@@ -160,15 +191,44 @@ function productcard(item) {
                     <h2 class="titelshop text-2xl text-purple-900 font-medium">${item.nameproduct}</h2>
                     <p class="pshop text-gray-500">${item.titel}</p>
                 </div>
-                <div class="flex justify-between p-3 ">
-                    <h2 class="mt-auto price text-purple-900 font-bold text-lg md:text-2xl">${item.price} <i class="fa-solid fa-shekel-sign text-sm"></i></h2>
-                    <button onclick="itemCard(${item.id})"
-                        id="btnShoping" class=" transition-all duration-700 bg-purple-100 rounded-3xl w-14 h-10 md:w-32 md:h-10 md:text-xl
+                  <h2 class="mt-auto price text-purple-900 font-bold text-lg md:text-2xl">${item.price} <i class="fa-solid fa-shekel-sign text-sm"></i></h2>
+                          <div class="flex justify-center mt-auto p-3 gap-2 ">  
+                            <button onclick="itemCard(${item.id})"
+                        id="btnShoping" class=" transition-all md:duration-500 bg-purple-100 rounded-3xl w-20 h-10 md:w-32 md:h-10 md:text-xl
                           group-hover:bg-purple-900 group-hover:text-white">تسوق</button>
+                    <button onclick="sendWhatsApp1(${item.id})"
+                        id="btnShoping" class=" transition-all md:duration-500 bg-purple-100 rounded-3xl w-20 h-10 md:w-32 md:h-10 md:text-xl
+                          group-hover:border-2 border-purple-400 hover:bg-white hover:text-black ">شراء</button>
 
                 </div>
             </div>
 `
+}
+function sendWhatsApp1(id) {
+    let message = `أهلاً وسهلاً فيك بـ areen store 🌸💐
+نورتنا وشكراً لاهتمامك!
+
+`
+    product.map((item) => {
+        if (item.id == id) {
+
+            message += `المنتج: ${item.nameproduct}
+الوصف: ${item.titel}
+سعر القطعة: ${item.price} شيكل
+`
+            message += `
+            حابب نأكد الطلب ولا عندك أي استفسار؟
+فريق areen store جاهز يخدمك 🌷`
+        }
+    })
+    let phone = "970566250402"
+
+    window.open(
+        "https://api.whatsapp.com/send?phone=" +
+        phone +
+        "&text=" +
+        encodeURIComponent(message)
+    )
 }
 
 
@@ -290,19 +350,22 @@ let countercard = document.querySelector("#countercard")
 
 function clickcarded() {
 
-    sideCart.classList.toggle("hidden")
+    sideCart.classList.toggle("OpenSideCart")
+    sideCart.classList.remove("hiddenSideCart")
     overlay.classList.toggle("hidden")
     document.body.classList.toggle("overflow-hidden")
 
 }
 canselbtn.addEventListener("click", () => {
-    sideCart.classList.add("hidden")
+    sideCart.classList.remove("OpenSideCart")
+    sideCart.classList.add("hiddenSideCart")
     overlay.classList.add("hidden")
     document.body.classList.remove("overflow-hidden")
 
 })
 overlay.addEventListener("click", () => {
-    sideCart.classList.add("hidden")
+    sideCart.classList.add("hiddenSideCart")
+    sideCart.classList.remove("OpenSideCart")
     overlay.classList.add("hidden")
     document.body.classList.remove("overflow-hidden")
 
@@ -328,7 +391,7 @@ function productAddToSidCart(item) {
                         <p id="newpriceproduct-${item.id}">${item.price * item.quantity}</p>
                     </span>
                 </div> 
-                <button  onclick="deleteFromCart(${item.id})" class="text-lg md:text-xl hover:text-red-600"><i class="fa-solid fa-trash-can"></i></button>
+                <button  onclick="deleteFromCart(${item.id})" class=" text-lg md:text-xl hover:text-red-600"><i class="fa-solid fa-trash-can"></i></button>
             </div>           
                 
 `
@@ -393,7 +456,7 @@ function itemCard(id) {
 
     printtotalprice()
     localStorage.setItem("cart", JSON.stringify(cart))
-
+    massegAddToCart()
 }
 // كاونتر 
 
@@ -423,9 +486,9 @@ function printtotalprice() {
     }
     if (totalpriceincartf) {
 
-    totalpriceincartf.innerHTML = `<i class="fa-solid fa-shekel-sign text-sm"></i>` + " " + totalprice
-} 
-updateCartCounter()
+        totalpriceincartf.innerHTML = `<i class="fa-solid fa-shekel-sign text-sm"></i>` + " " + totalprice
+    }
+    updateCartCounter()
 }
 
 
@@ -501,7 +564,7 @@ function Decrease(id) {
         }
     })
 
-printtotalprice() 
+    printtotalprice()
 }
 // 
 // 
@@ -531,14 +594,10 @@ function deleteFromCart(id) {
     if (document.querySelector("#pagecard")) {
         addToPageCard()
     }
-printtotalprice()
+    printtotalprice()
 }
 
 
-// //
-// //
-// //
-// //
 
 
 

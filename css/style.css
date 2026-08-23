@@ -1,0 +1,48 @@
+.successMessage {
+    position: fixed;
+    top: 100px;
+    right: -400px;
+    z-index: 200;
+    background: linear-gradient(to left, #581c87, #9333ea,#a452f0);
+    color: white;
+    padding: 5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 200;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.successMessage.ShowMessage {
+    right: 30px;
+}
+
+.successMessage.hiddenMessage {
+    right: -400px;
+}
+
+/* class="z-50 rounded-3xl hidden flex w-[50vh] md:w-[100vh] flex-col space-y-4 p-4 
+ md:p-10 bg-white border-2 border-gray-400 fixed top-20 right-2 max-h-[80vh] overflow-y-auto"> */
+
+
+#sideCart {
+    position: fixed;
+    right: -900px;
+    transition: 0.5s;
+
+}
+
+#sideCart.OpenSideCart {
+    right: 10px;
+
+}
+
+#sideCart.hiddenSideCart {
+    right: -900px;
+
+
+}
