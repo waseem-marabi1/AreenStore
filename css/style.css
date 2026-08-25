@@ -3,7 +3,7 @@
     top: 100px;
     right: -400px;
     z-index: 200;
-    background: linear-gradient(to left, #581c87, #9333ea,#a452f0);
+    background: linear-gradient(to left, #581c87, #9333ea, #a452f0);
     color: white;
     padding: 5px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
@@ -44,5 +44,28 @@
 #sideCart.hiddenSideCart {
     right: -900px;
 
+
+
+}
+
+.imgmotion {
+    animation-name: motion;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+box-shadow: 0.5px 0.5px 20px   rgb(84, 49, 84);
+}
+
+@keyframes motion {
+
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 
 }

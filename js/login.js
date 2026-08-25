@@ -4,6 +4,7 @@ let loginbtn = document.querySelector("#loginbtn")
 let getusername = localStorage.getItem("username")
 let getpassword = localStorage.getItem("password")
 
+alert("اضغط تخطي للذهاب للمتجر ")
 loginbtn.addEventListener("click", function (e) {
     e.preventDefault()
     if (password.value === "" || username.value === "") {

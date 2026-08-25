@@ -11,125 +11,21 @@
     rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<!--  -->
-<body class="font-[Tajawal] font-normal">    <!-- start head -->
-    <div
-        class="h-20 w-full flex justify-between items-center px-4 md:px-8 lg:px-12 fixed z-50 bg-[#FDFBF9]/70 backdrop-blur-sm border-b border-[#E9E2DD]">
-        <div class="flex  gap-4">
-            <button id="btnmun"
-                class="md:hidden  relative bg-purple-100 w-10 h-10 flex rounded-full justify-center items-center"><i
-                    id="iconlist" class="fa-solid fa-bars"></i></button>
-            <div id="listmubile" class="hidden lg:hidden  fixed right-0 flex top-0 flex-col rounded-2xl w-screen 
-                bg-white border-2 border-purple-100 text-gray-800 shadow-xl  mt-[80px] z-50 p-4">
+<body class="font-[Tajawal] font-normal">  
 
-                <a href="index.html"
-                    class="btnpage  font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right"><i
-                        class="fas fa-home"></i> الرئيسية</a>
-                <a href="shop.html"
-                    class="btnpage  font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right">
-                    <i class="fas fa-shopping-bag"></i> المتجر</a>
-                <a href="howme.html"
-                    class="btnpage  font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right"><i
-                        class="fas fa-user-circle"></i> من
-                    نحن</a>
-                <a href="contact.html"
-                    class="btnpage  font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right"><i
-                        class="fas fa-envelope"></i> تواصل
-                    معنا</a>
-                <a id="loginbtnphone" href="login.html"
-                    class="btnpage  font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right"><i
-                        class="fa-regular fa-user text-2xl"></i> تسجيل الدحول</a>
-                <a id="logoutbtnphone" href="login.html"
-                    class="btnpage  font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl w-full text-right flex"><i
-                        class="fa-regular fa-user text-2xl my-auto"></i>
-                    <div class="mr-2"> تسجيل الخروج | <span id="loginusernamephone"></span></div>
-                </a>
-
-
-            </div>
-
-            <button class="" id="btncard" type="button" onclick="clickcarded()">
-                <div class="flex gap-5">
-
-                    <div class="relative  bg-purple-100 w-10 h-10 flex rounded-full justify-center items-center">
-                        <p id="countercard"
-                            class="counter absolute -top-3 right-7 text-white bg-purple-950 rounded-full w-6 h-6  text-center">
-                        </p>
-
-                        <i class="fa-solid fa-cart-plus"></i>
-
-                    </div>
-                </div>
-
-            </button>
-
-        </div>
-
-
-        <div class="hidden md:flex gap-10">
-            <a href="index.html" class="btnpage font-[Tajawal] font-medium tracking-normal  rounded-3xl p-3 text-xl ">الرئيسية</a>
-            <a href="shop.html"
-                class="btnpage font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl">المتجر</a>
-            <a href="howme.html"
-                class="btnpage font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl">من نحن</a>
-            <a href="contact.html"
-                class="btnpage  font-[Tajawal] font-medium tracking-normal hover:bg-purple-100 rounded-3xl p-3 text-xl">تواصل
-                معنا</a>
-
-
-        </div>
-        <div class="flex gap-5">
-            <a id="loginbtn" href="login.html" class="m-auto ml-4 md:block hidden"><i
-                    class="fa-regular fa-user text-2xl"></i></a>
-            <button id="lgoutbtn" class=" text-xl hidden  m-auto  ">تسجيل الخروج |</button>
-            <p id="lginusername" class=" text-2xl hidden md:block m-auto ml-4 -mr-4"></p>
-            <div class="flex justify-center items-center text-center ">
-              <p class="text-purple-950 font-['Tajawal'] font-normal text-xl hidden md:block ml-3">
-                    Areen <br>
-                    <span class="font-[Tajawal] text-sm tracking-[3px]">Store</span>
-                </p>
-                <div><a href="index.html"> <img src="img/areen-logo.jpeg" class="rounded-full w-[60px] h-[60px]"
-                            alt=""></a></div>
-            </div>
-
-        </div>
-
-    </div>
-
- <!-- سلة المشترايات الجانبية  -->
-   <div id="overlay" class="hidden fixed inset-0 bg-black/40  z-40">
-    </div>
-
-    <div id="sideCart"
-        class="z-50 rounded-3xl  flex w-[45vh] md:w-[100vh] flex-col space-y-4 p-4 md:p-10 bg-white border-2 border-gray-400   top-20 right-2 max-h-[60vh] md:max-h-[80vh] overflow-y-auto">
-        <div class=" flex ">
-            <h1 class=" text-2xl mx-auto font-bold">سلة المشتريات </h1>
-        <button id="canselbtn"><i class=" fa-regular fa-circle-xmark text-3xl hover:text-red-600 "></i></button>
-    </div>
-    <div id="theitemincadt"  class="flex flex-col-reverse gap-4">
-
-    </div>
-    <p id="totalpricehtml" class=" text-2xl font-semibold"></p>
-    <a href="card.html" class="text-center bg-purple-200 rounded-lg py-2 hover:bg-purple-300">الذهاب للسلة</a>
-</div>
-    <!--  -->
-    <!--  -->
-<!-- اشعار الاضافة للسلة  -->
-<div class="successMessage" >
-تمت إضافة المنتج إلى السلة 
-</div>    <!-- end head -->
-
-    <!-- end head -->
+  
+  
+    <div class="head"></div>
 
     <div id="index" class="page  pt-20  ">
         <div class="grid md:grid-cols-2 ">
             <div
-                class="lg:px-20 p-10 space-y-7 bg-gradient-to-b from-white via-via-purple-50 to-purple-200  md:bg-gradient-to-br md:from-purple-100 md:via-purple-50 md:to-white">
+                class="lg:px-20 p-10 space-y-7 bg-gradient-to-b from-white via-purple-50 to-purple-200  md:bg-gradient-to-br md:from-purple-100 md:via-purple-50 md:to-white">
                 <div
                     class="flex gap-2 bg-purple-100  rounded-2xl text-center p-1 italic tracking-widest font-serif text-sm ">
                     <i class="fa-regular fa-star "></i>
                     <p>هدايا لكل لحظة مميزة</p>
-                </div><h1 class="mt-6  text-5xl text-purple-950 tracking-normal  md:text-7xl">لمسة أنيقة<br>لكل مناسبة</h1>
+                </div><h1 class="mt-6  text-5xl text-purple-950 tracking-normal  md:text-7xl"> لمسة أنيقة<br class="hidden lg:block">لكل مناسبة</h1>
                     
                 <p class="mt-6  text-base  md:text-lg">من باقات الساتان الفاخرة إلى الهدايا المطبوعة وعطور راقية — اكتشف
                     مجموعة Areen المختارة بعناية لتحوّل كل مناسبة إلى ذكرى تدوم.</p>
@@ -152,10 +48,10 @@
                     <li>المناسبات الخاصة</li>
                 </ul>
             </div>
-            <div class="relative flex bg-gradient-to-br from-purple-200 via-purple-100 to-purple-50 p-3">
+            <div class="relative  flex bg-gradient-to-br from-purple-200 via-purple-100 to-purple-50 p-3">
 
 
-                <img src="img/areen-logo.jpeg" class="m-auto  rounded-full size-[300px] md:size-[400px]" alt="">
+                <img src="img/areen-logo.jpeg" class="imgmotion   m-auto  rounded-full hidden md:block md:size-[400px]" alt="">
             </div>
         </div>
         <!-- قسم الفيديو  -->
@@ -188,7 +84,7 @@
                     <p class="text-gray-500">تصفّح المجموعات</p>
                     <h2 class="text-2xl md:text-4xl text-purple-900 font-bold">الأقسام المميزة</h2>
                 </div>
-                <button data-page="shop" class="btnpagefoter mr-auto hover:text-purple-600">كل الأقسام </button>
+                <a href="shop.html" data-page="shop" class="btnpagefoter mr-auto hover:text-purple-600">كل الأقسام </a>
             </div>
 
             <div id="allproductindex" class="w-full grid grid-cols-2 p-2 gap-2 md:grid-cols-3 lg:grid-cols-4 ">
@@ -205,109 +101,7 @@
             <div id="allproductstar" class="w-full grid grid-cols-2 p-2 gap-4 md:grid-cols-3 lg:grid-cols-4  ">
 
             </div>
-            <!-- تجربة التسوق -->
-            <div
-                class="m-3 bg-gradient-to-br from-purple-400 via-purple-200 to-purple-100 p-5 rounded-3xl lg:mx-14 lg:px-14 mt-20">
-                <div class="flex flex-col  justify-center items-center">
-                    <p class="tracking-widest text-xl">لماذا Areen</p>
-                    <h1 class="text-purple-950 mt-2  text-4xl font-medium">تجربة تسوّق فاخرة</h1>
-                </div>
-                <div class="  grid  gap-5 mt-14 md:p-10 lg:grid-cols-4 lg:p-0">
-                    <div class="bg-white p-5 rounded-3xl ">
-                        <div
-                            class="bg-purple-950 w-14 h-14 rounded-full flex justify-center items-center text-white text-2xl">
-                            <i class="fa-regular fa-star "></i>
-                        </div>
-                        <div class="mt-5 space-y-2">
-                            <h2 class="text-purple-950 text-2xl font-bold">تصميم فريد </h2>
-                            <p class="text-gray-500">لمسة انيقة يدوية لكل باقة وهدية</p>
-                        </div>
-                    </div>
-                    <div class="bg-white p-5 rounded-3xl ">
-                        <div
-                            class="bg-purple-950 w-14 h-14 rounded-full flex justify-center items-center text-white text-2xl">
-                            <i class="fa-regular fa-star "></i>
-                        </div>
-                        <div class="mt-5 space-y-2">
-                            <h2 class="text-purple-950 text-2xl font-bold">تصميم فريد </h2>
-                            <p class="text-gray-500">لمسة انيقة يدوية لكل باقة وهدية</p>
-                        </div>
-                    </div>
-                    <div class="bg-white p-5 rounded-3xl ">
-                        <div
-                            class="bg-purple-950 w-14 h-14 rounded-full flex justify-center items-center text-white text-2xl">
-                            <i class="fa-regular fa-star "></i>
-                        </div>
-                        <div class="mt-5 space-y-2">
-                            <h2 class="text-purple-950 text-2xl font-bold">تصميم فريد </h2>
-                            <p class="text-gray-500">لمسة انيقة يدوية لكل باقة وهدية</p>
-                        </div>
-                    </div>
-                    <div class="bg-white p-5 rounded-3xl ">
-                        <div
-                            class="bg-purple-950 w-14 h-14 rounded-full flex justify-center items-center text-white text-2xl">
-                            <i class="fa-regular fa-star "></i>
-                        </div>
-                        <div class="mt-5 space-y-2">
-                            <h2 class="text-purple-950 text-2xl font-bold">تصميم فريد </h2>
-                            <p class="text-gray-500">لمسة انيقة يدوية لكل باقة وهدية</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- اراء العملاء -->
-            <div class="m-3   p-5 rounded-3xl lg:mx-14 lg:px-14 mt-20">
-                <div class="flex flex-col  justify-center items-center">
-                    <p class="tracking-widest text-xl">اراء العملاء</p>
-                    <h1 class="text-purple-950 font-extrabold text-5xl">قصص سعيدة</h1>
-                </div>
-                <div class="  grid  gap-5 mt-14 md:p-10 lg:grid-cols-3 lg:p-0">
-                    <div class="bg-white p-5 rounded-3xl shadow-xl ">
-                        <div class="text-purple-950   rounded-full flex  space-x-1 text-lg ">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="mt-5 space-y-2">
-                            <h2 class=" text-gray-500 text-lg font-bold"> "الباقة كانت أجمل من الصورة! تغليف فاخر وتوصيل
-                                سريع." </h2>
-                            <p class="text-purple-950 text-xl font-bold">سارة م.</p>
-                        </div>
-                    </div>
-                    <div class="bg-white p-5 rounded-3xl shadow-xl ">
-                        <div class="text-purple-950   rounded-full flex  space-x-1 text-lg ">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="mt-5 space-y-2">
-                            <h2 class=" text-gray-500 text-lg font-bold"> هدية مثالية لتخرج أخي، الجودة ممتازة والألوان
-                                دقيقة. </h2>
-                            <p class="text-purple-950 text-xl font-bold">أحمد ع.</p>
-                        </div>
-                    </div>
-                    <div class="bg-white p-5 rounded-3xl shadow-xl ">
-                        <div class="text-purple-950   rounded-full flex  space-x-1 text-lg ">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="mt-5 space-y-2">
-                            <h2 class=" text-gray-500 text-lg font-bold"> ""أطلب من Areen دائمًا لكل مناسبة، الذوق
-                                الرفيع
-                                حاضر في كل قطعة."" </h2>
-                            <p class="text-purple-950 text-xl font-bold">ليان ك.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+           
             <!-- تابعنا  -->
             <div class="px-6 lg:px-20 mt-20">
                 <div
@@ -342,99 +136,10 @@
             </div>
         </div>
 
-        <!-- floot -->
-         <div class="bg-gradient-to-t via-purple-200/50 from-purple-200/60 to-white">
-        <div class="p-5 mt-20 grid gap-4 lg:grid-cols-4  ">
-            <!--  -->
-            <div class="space-y-4">
-                <div class="flex items-center gap-4">
+        <div class="footer"></div>
+            <script src="js/footer.js"></script>
+            <script src="js/headr.js"></script>
 
-                    <div>
-                        <img src="img/areen-logo.jpeg" class="w-20 h-20 rounded-full object-cover" alt="">
-                    </div>
-                    <div class="text-right">
-                        <h1 class="font-['Great_Vibes'] text-5xl text-purple-900 italic ">
-                            Areen
-                        </h1>
-
-                        <p class="font-['Tajawal'] text-gray-600 text-sm tracking-[5px] uppercase mt-2">
-                            Store
-                        </p>
-                    </div>
-                </div>
-                <div class="text-gray-500 font-medium text-lg mt-3">
-                    <p>متجر متكامل للورد والهدايا الفاخرة لجميع المناسبات — لمسة أنيقة لكل لحظة مميزة.</p>
-                </div>
-            </div>
-
-
-            <div class="space-y-4">
-                <h1 class="text-2xl text-purple-900 font-bold">روابط سريعة</h1>
-                <ul class=" flex flex-col gap-2 text-gray-500 font-semibold ">
-
-                    <li class="hover:-translate-x-2 transition-all duration-200">
-                        <a href="shop.html" class="">
-                            <i class="fa-solid fa-angle-left ml-2"></i>
-                            المتجر
-                        </a>
-                    </li>
-                    <li class="hover:-translate-x-2 transition-all duration-200"> <a href="howme.html" class="">
-                            <i class="fa-solid fa-angle-left ml-2"></i>
-                            من نحن</a>
-                    </li>
-                    <li class="hover:-translate-x-2 transition-all duration-200"> <a href="contact.html" class="">
-                            <i class="fa-solid fa-angle-left ml-2"></i>
-                            تواصل معنا</a>
-                    </li>
-                    <li class="hover:-translate-x-2 transition-all duration-200"> <a href="card.html" class="">
-                            <i class="fa-solid fa-angle-left ml-2"></i>
-                            سلة التسوق</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="space-y-4">
-                <h1 class="text-2xl text-purple-900 font-bold">تواصل معنا</h1>
-                <ul class=" flex flex-col gap-2 text-gray-500 font-semibold ">
-                    <li class="hover:-translate-x-2 transition-all duration-200"><i
-                            class="fa-solid fa-angle-left ml-2"></i><a href="https://wa.me/972569506109"
-                            target="_blank">972569506109</a></li>
-                    <li class="hover:-translate-x-2 transition-all duration-200"><i
-                            class="fa-solid fa-angle-left ml-2"></i><a
-                            href="https://www.instagram.com/areen.store19?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            target="_blank">AreenStore</a></li>
-                    <li class="hover:-translate-x-2 transition-all duration-200"><i
-                            class="fa-solid fa-angle-left ml-2"></i><a>فلسطين\جنين</a></li>
-                </ul>
-            </div>
-            <div class="space-y-4">
-                <h1 class="text-2xl text-purple-900 font-bold">تابعنا</h1>
-                <div class="flex gap-5 text-center ">
-                    <a href="https://www.instagram.com/areen.store19?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        target="_blank">
-                        <div
-                            class=" bg-white shadow-md flex justify-center items-center shadow-black rounded-full size-12 cursor-pointer hover:bg-purple-800 hover:text-white transition-all duration-200">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                    </a>
-                    <a href="https://www.tiktok.com/@areen.store19?is_from_webapp=1&sender_device=pc" target="_blank">
-                        <div
-                            class=" bg-white shadow-md flex justify-center items-center shadow-black rounded-full size-12 cursor-pointer hover:bg-purple-800 hover:text-white transition-all duration-200">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </div>
-                    </a>
-                </div>
-                <p class="mt-4">اشترك في نشرتنا لتصلك أحدث المجموعات والعروض.</p>
-            </div>
-
-        </div>
-        <hr>
-        <div class="flex p-6 justify-between">
-            <p class=" ">© 2026 Areen Store — جميع الحقوق محفوظة</p>
-            <p class="tracking-[2px] "><i class="fa-solid fa-heart text-red-600"></i> Development by <a
-                    href="https://www.linkedin.com/in/waseem-marabi-b17b06326/" target="_blank"
-                    class="text-purple-700 font-bold"> waseem mrabi</a> </p>
-        </div>
-        </div>
         <script src="js/scrept.js"></script>
 
 </body>

@@ -90,7 +90,7 @@ function sendWhatsApp() {
 حابب نأكد الطلب ولا عندك أي استفسار؟
 فريق areen store جاهز يخدمك 🌷`
 
-    let phone = "970566250402"
+    let phone = "972569506109"
 
     window.open(
         "https://api.whatsapp.com/send?phone=" +

@@ -1,4 +1,7 @@
 //
+
+
+
 //
 // زر التلفون 
 var btnmun = document.getElementById("btnmun")
@@ -65,10 +68,9 @@ let productindex = [
     new productsindex("img/صناعي.jpg", "باقات الورد الصناعي", "جمال واثر للابد", "Artificial"),
 
     new productsindex("img/اكسسوارات1.jpg", "الأكسسوارات", "قطع انيقة جميلة", "accessories"),
+    new productsindex("img/مسكة.jpg", "مسكات العروس", "أناقة ليومك المميز", "Bridalbouquet"),
 
-    new productsindex("img/عطرنسائي.jpg", "عطور نسائية", "روائح ساحرة"),
-
-    new productsindex("img/u'vv[hgd.jpg", "عطور رجالية", "اناقة راقية"),
+    new productsindex("img/boxflooer1.jpg", "بوكسات الورد", "هدية فاخرة لكل مناسبة", "Flowerbox"),
 
     new productsindex("img/هدايا.jpg", "باقات هدايا", "علب جاهزة بلمسة فاخرة", "gifts"),
 
@@ -126,24 +128,24 @@ class products {
 let product = [
     new products(1, "Graduation", true, "img/wesha7.jpg", "وشاح تخرج", "وشاح تخرج مميز ", 90),
     new products(2, "satan", true, "img/ورد ساتان2.jpg", " باقة ساتان", "حجم كبير مع بيبي فلور ", 115),
-    new products(3, "Artificial", true, "img/ورد صناعي.jpg", " باقة صناعي", "حجم وسط", 90),
-    new products(4, "Printedgifts", true, "img/بكج مصحف2.jpg", "بكج مصحف", "مصلى مصحف كاسة", 250),
-    new products(5, "satan", true, "img/وردساتان.jpg", " باقة ساتان", "حجم كبير مع وشاح وتل", 130),
-    new products(6, "gifts", false, "img/packj.jpg", "بكج سكتش", "هدية ورد وكاسة ودفتر سكتش", 150),
+    new products(3, "Artificial", true, "img/ورد صناعي.jpg", " باقة صناعي", "حجم صغير", 60),
+    new products(4, "Printedgifts", true, "img/بكج مصحف2.jpg", "بكج مصحف", "مصلى وكاسة وقران ", 100),
+    new products(5, "satan", true, "img/وردساتان.jpg", " باقة ساتان", " باقة ساتان تخرج مع تل اسود ووشاح وفراشة", 130),
+    new products(6, "gifts", false, "img/packj.jpg", "بكج سكتش", "برواز ,دفتر, كاسة , دب , تشكيلة شكلاطة , وورد ", 280),
     new products(7, "satan", false, "img/ledflooer.jpg", " باقة ساتان", "باقة ساتان مضيئة مع دب سكتش", 170),
-    new products(8, "Artificial", false, "img/وردة صناعي.jpg", " باقة صناعي", "حجم كبير", 120),
-    new products(9, "Printedgifts", false, "img/بكج مصحف1.jpg", "بكج مصحف", "مصحف ومصلى وباقة", 140),
+    new products(8, "Artificial", false, "img/وردة صناعي.jpg", " باقة صناعي", "حجم وسط", 80),
+    new products(9, "Printedgifts", false, "img/بكج مصحف1.jpg", "بكج مصحف", "مصحف ومصلى وباقة", 100),
     new products(10, "Bridalbouquet", true, "img/مسكة.jpg", "مسكة", "مسكة مميزة", 130),
     new products(11, "satan", false, "img/satan1.jpg", " باقة ساتان", "باقة صناعي مع وشاحاقة حجم صغير ٥٠ شيكل (١٥ وردة  مع عبارة ١٠)", 60),
-    new products(12, "Graduation", false, "img/وشاح تخرج.jpg", "وشاح تخرج", "وشاح و طاقية تخرج", 100),
-    new products(13, "accessories", false, "img/اكسسوارات.jpg", "اكسسوارات", "شنطة سلسال سوارة ساعة", 250),
-    new products(14, "Graduation", true, "img/بكج تخرج.jpg", "بكج تخرج", "وشاح طاقية وردة جريدة", 150),
-    new products(15, "Artificial", false, "img/ورد صناعي1.jpg", " باقة صناعي", "باقة ساتان مع وشاح", 110),
+    new products(12, "Graduation", false, "img/وشاح تخرج.jpg", "وشاح تخرج", "وشاح و طاقية تخرج", 120),
+    new products(13, "accessories", false, "img/اكسسوارات.jpg", "اكسسوارات", "طقم ساعة واسوارتين 100 , شنتة 70 , سنسال 30", 200),
+    new products(14, "Graduation", true, "img/بكج تخرج.jpg", "بكج تخرج", "باقة 60 وشاح وطاقية 120 جريدة 20", 200),
+    new products(15, "Artificial", false, "img/ورد صناعي1.jpg", " باقة صناعي", "باقة ساتان مع وشاح حجم وسط", 115),
     new products(16, "gifts", false, "img/mekap.jpg", "  باقة ميكب ", "باقة ميكب بجودة عالية", 200),
     new products(17, "satan", false, "img/satan2.jpg", " باقة ساتان", " باقة ساتان حجم وسط (20وردة)", 80),
-    new products(18, "satan", false, "img/boxflooer.jpg", " بوكس ورد", "بوكس ساتان حجم صغير", 60),
-    new products(19, "satan", false, "img/boxflooer1.jpg", " بوكس ورد", " بوكس ساتان حجم كبير", 100),
-    new products(20, "gifts", false, "img/giftsatanmag.jpg", "هدية باللون الازرق ", "باقة ورد  دب ستيتش كاسة ماسك وجه", 80),
+    new products(18, "Flowerbox", false, "img/boxflooer.jpg", " بوكس ورد", "بوكس ساتان حجم صغير", 60),
+    new products(19, "Flowerbox", false, "img/boxflooer1.jpg", " بوكس ورد", " بوكس ساتان حجم كبير", 100),
+    new products(20, "gifts", false, "img/giftsatanmag.jpg", "هدية باللون الازرق ", " دب ستيتش 40 كاسة 15 ماسك 5 باقة حجم وسط 80", 140),
     new products(21, "satan", true, "img/khtopa.jpg", " باقة ساتان خطوبة", "باقة خطوبة حجم كبير  ( ٣٥ وردة) مع وشاح ١٠", 110),
     new products(22, "satan", true, "img/khtopa2.jpg", " باقة ساتان خطوبة", "باقة خطوبة حجم صغير  ( ١٥ وردة)  اضافات بيبي فلور ١٠  /  عبارة ١٠", 70),
     new products(23, "gifts", false, "img/mom.jpg", "هدية ام", "هدية ام كفر نلفون وكاسة ", 50),
@@ -152,6 +154,8 @@ let product = [
 
 
 ]
+// Bridalbouquet مسكة
+// Flowerbox بوكس 
 // satan ورد ساتان
 // Artificial ورد صناعي
 // Graduation تخرج
@@ -221,7 +225,7 @@ function sendWhatsApp1(id) {
 فريق areen store جاهز يخدمك 🌷`
         }
     })
-    let phone = "970566250402"
+    let phone = "972569506109"
 
     window.open(
         "https://api.whatsapp.com/send?phone=" +
@@ -345,9 +349,10 @@ let cart = JSON.parse(localStorage.getItem("cart")) || []
 let totalpricehtml = document.querySelector("#totalpricehtml")
 let totalpriceincart = document.querySelector("#totalpriceincart")
 let totalpriceincartf = document.querySelector("#totalpriceincartf")
-let totalprice = Number(localStorage.getItem("totalprice")) || 0
 let countercard = document.querySelector("#countercard")
-
+let totalprice = cart.reduce((total, item) => {
+    return total + (item.price * (item.quantity || 1))
+}, 0)
 function clickcarded() {
 
     sideCart.classList.toggle("OpenSideCart")
@@ -356,22 +361,25 @@ function clickcarded() {
     document.body.classList.toggle("overflow-hidden")
 
 }
-canselbtn.addEventListener("click", () => {
-    sideCart.classList.remove("OpenSideCart")
-    sideCart.classList.add("hiddenSideCart")
-    overlay.classList.add("hidden")
-    document.body.classList.remove("overflow-hidden")
+if (canselbtn) {
+    canselbtn.addEventListener("click", () => {
+        sideCart.classList.remove("OpenSideCart")
+        sideCart.classList.add("hiddenSideCart")
+        overlay.classList.add("hidden")
+        document.body.classList.remove("overflow-hidden")
 
-})
-overlay.addEventListener("click", () => {
-    sideCart.classList.add("hiddenSideCart")
-    sideCart.classList.remove("OpenSideCart")
-    overlay.classList.add("hidden")
-    document.body.classList.remove("overflow-hidden")
+    })
+}
+if (overlay) {
+    overlay.addEventListener("click", () => {
+        sideCart.classList.add("hiddenSideCart")
+        sideCart.classList.remove("OpenSideCart")
+        overlay.classList.add("hidden")
+        document.body.classList.remove("overflow-hidden")
 
 
-})
-
+    })
+}
 // اضافة المنتجات للسلة الجانبية 
 function productAddToSidCart(item) {
 
@@ -398,6 +406,9 @@ function productAddToSidCart(item) {
 }
 
 function updatecart() {
+    if (!theitemincadt) {
+        return;
+    }
     theitemincadt.innerHTML = ""
 
     if (cart.length === 0) {
@@ -434,7 +445,6 @@ function itemCard(id) {
             counternumofproduct.innerHTML = item.quantity
             newpriceproduct.innerHTML =
                 item.price * item.quantity
-            totalprice += item.price
             localStorage.setItem("totalprice", totalprice)
 
         }
@@ -446,7 +456,6 @@ function itemCard(id) {
                 cart.push(item)
                 updatecart()
                 totalprice += item.price
-                localStorage.setItem("totalprice", totalprice)
                 if (document.querySelector("#pagecard")) {
                     addToPageCard()
                 }
@@ -511,7 +520,6 @@ function Increase(id) {
                     cartitem.quantity =
                         Number(cartitem.quantity) + 1
                     totalprice += item.price
-                    localStorage.setItem("totalprice", totalprice)
 
                     if (document.querySelector("#pagecard")) {
                         addToPageCard()
@@ -549,7 +557,6 @@ function Decrease(id) {
                         cartitem.quantity =
                             Number(cartitem.quantity) - 1
                         totalprice -= item.price
-                        localStorage.setItem("totalprice", totalprice)
 
                         if (document.querySelector("#pagecard")) {
                             addToPageCard()
@@ -578,8 +585,6 @@ function deleteFromCart(id) {
 
             for (let index = 0; index < item.quantity; index++) {
                 totalprice -= item.price
-                localStorage.setItem("totalprice", totalprice)
-
             }
             cart.splice(index, 1)
 
@@ -600,59 +605,6 @@ function deleteFromCart(id) {
 
 
 
-
-
-// //
-// //
-// //
-// // اضافة للسلة الجانبية
-// //
-// // id: 1,
-// //         category: "Graduation",
-// //         star: true,
-// //         imgproduct: "img/wesha7.jpg",
-// //         nameproduct: "وشاح تخرج",
-// //         titel: "وشاح تخرج مميز ",
-// //         price: 90
-// let btnShoping = document.querySelector("#btnShoping")
-// let theitemincadt = document.querySelector("#theitemincadt")
-// function itemCard() {
-//     product.id
-//     product.map((item) => {
-
-//     })
-// }
-
-
-
-
-// //
-// //
-// //
-
-
-
-
-
-
-
-// carded.innerHTML += ` <div id="${i}" class="bg-white shadow-gray shadow-md flex  items-center   p-3 gap-2 rounded-2xl">
-//                     <div class=""><img src="${arrcard[i].img}" class="size-[100px] rounded-2xl " alt=""></div>
-//                     <div class="w-full">
-//                         <div class="px-3">
-//                             <div class="flex justify-between ">
-//                                 <h2 class="font-bold text-purple-950 text-xl">${arrcard[i].titelshop}</h2> <i
-//                                     onclick="removeCard(${[i]})" class="fa-regular fa-trash-can hover:text-red-500 cursor-pointer"></i>
-//                             </div>
-//                             <p class="text-gray-600  ">${arrcard[i].pshop}</p>
-//                         </div>
-//                         <div class="  flex  justify-between  px-3 mt-4">
-//                             <div>- 1 +</div>
-//                             <h2 class="text-gray-600  text-2xl font-bold ">${arrcard[i].price}</h2>
-//                         </div>
-//                     </div>
-//                 </div>`
-// console.log(1)
 
 //  الفيديوهات والتحويل بينهن
 
@@ -721,4 +673,5 @@ if (lgoutbtn) {
     })
 }
 // // ///////////////////////// الاقسام المميزة
+
 
