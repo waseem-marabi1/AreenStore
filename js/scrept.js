@@ -76,7 +76,8 @@ let productindex = [
 
     new productsindex("img/طباعة.jpg", "هدايا الطباعة", "مسة شخصية بصورك", "Printedgifts"),
 
-    new productsindex("img/بكج تخرج.jpg", "مجموعة التخرج", "احتفل بلحظاتك", "Graduation")
+    new productsindex("img/بكج تخرج.jpg", "مجموعة التخرج", "احتفل بلحظاتك", "Graduation"),
+    new productsindex("img/mom.jpg", "  عيد الام ", "هدايا الام ", "giftmom")
 
 ]
 function cardindex() {
@@ -136,11 +137,11 @@ let product = [
     new products(8, "Artificial", false, "img/وردة صناعي.jpg", " باقة صناعي", "حجم وسط", 80),
     new products(9, "Printedgifts", false, "img/بكج مصحف1.jpg", "بكج مصحف", "مصحف ومصلى وباقة", 100),
     new products(10, "Bridalbouquet", true, "img/مسكة.jpg", "مسكة", "مسكة مميزة", 130),
-    new products(11, "satan", false, "img/satan1.jpg", " باقة ساتان", "باقة صناعي مع وشاحاقة حجم صغير ٥٠ شيكل (١٥ وردة  مع عبارة ١٠)", 60),
+    new products(11, "satan", false, "img/satan1.jpg", " باقة ساتان", "باقة صناعي مع وشاح حجم صغير ٥٠ شيكل (١٥ وردة  مع عبارة ١٠)", 60),
     new products(12, "Graduation", false, "img/وشاح تخرج.jpg", "وشاح تخرج", "وشاح و طاقية تخرج", 120),
     new products(13, "accessories", false, "img/اكسسوارات.jpg", "اكسسوارات", "طقم ساعة واسوارتين 100 , شنتة 70 , سنسال 30", 200),
     new products(14, "Graduation", true, "img/بكج تخرج.jpg", "بكج تخرج", "باقة 60 وشاح وطاقية 120 جريدة 20", 200),
-    new products(15, "Artificial", false, "img/ورد صناعي1.jpg", " باقة صناعي", "باقة ساتان مع وشاح حجم وسط", 115),
+    new products(15, "Artificial", false, "img/ورد صناعي1.jpg", " باقة صناعي", "باقة مع وشاح حجم وسط", 115),
     new products(16, "gifts", false, "img/mekap.jpg", "  باقة ميكب ", "باقة ميكب بجودة عالية", 200),
     new products(17, "satan", false, "img/satan2.jpg", " باقة ساتان", " باقة ساتان حجم وسط (20وردة)", 80),
     new products(18, "Flowerbox", false, "img/boxflooer.jpg", " بوكس ورد", "بوكس ساتان حجم صغير", 60),
@@ -148,12 +149,36 @@ let product = [
     new products(20, "gifts", false, "img/giftsatanmag.jpg", "هدية باللون الازرق ", " دب ستيتش 40 كاسة 15 ماسك 5 باقة حجم وسط 80", 140),
     new products(21, "satan", true, "img/khtopa.jpg", " باقة ساتان خطوبة", "باقة خطوبة حجم كبير  ( ٣٥ وردة) مع وشاح ١٠", 110),
     new products(22, "satan", true, "img/khtopa2.jpg", " باقة ساتان خطوبة", "باقة خطوبة حجم صغير  ( ١٥ وردة)  اضافات بيبي فلور ١٠  /  عبارة ١٠", 70),
-    new products(23, "gifts", false, "img/mom.jpg", "هدية ام", "هدية ام كفر نلفون وكاسة ", 50),
+    new products(23, "giftmom", false, "img/mom.jpg", "هدية ام", "هدية ام كفر نلفون وكاسة ", 50),
     new products(24, "satan", true, "img/toze3t.jpg", " توزيعات ورد", " توزيعات ورد  ", 3),
+    new products(25, "satan", false, "img/satanled.jpg", "باقة ساتان مضيئة ", "باقة مضيئة ودب ستيتش واضافة فراشات ", 200),
+    new products(26, "satan", false, "img/satantaqeea.jpg", "باقة ساتان  ", "باقة اضافة بيبي فلور وطاقية تخرج ", 170),
+    new products(27, "Artificial", false, "img/snaae.jpg", "باقة صناعي  ", "باقة صناعي ميزة  ", 130),
+    new products(28, "Bridalbouquet", false, "img/maska.jpg", "مسكة    ", "  مسكة خطوبة  ", 160),
+    new products(29, "Artificial", false, "img/snaa1.jpg", "باقة صناعي", " باقة صناعي مع وشاح تخرج ", 70),
+    new products(30, "Graduation", false, "img/satantkhrj.jpg", "باقة تخرج ", "باقة تخرج مميزة مع وشاح  ", 70),
+    new products(31, "Artificial", false, "img/lovesnaae.jpg", "باقة صناعي", "باقة خطوبة مع وشاح  ", 190),
+    new products(32, "Bridalbouquet", false, "img/3zobea.jpg", "بكج توديع العزوبية ", " بكج توديع العزوبية ", 130),
+    new products(33, "satan", false, "img/satan3.jpg", "   باقة ساتان  ", "باقة ساتان حجم وسط  ", 80),
+    new products(34, "Artificial", false, "img/snaa3.jpg", "  باقى صناعي  ", " باقة ورد صناعي ", 60),
+    new products(35, "Bridalbouquet", false, "img/maska1.jpg", "  مسكة   ", "مسكة مميزة  ", 170),
+    new products(36, "satan", false, "img/satan4.jpg", "باقة ساتان ", "باقة بغلاف مميز ", 80),
+    new products(37, "gifts", false, "img/box1.jpg", "بوكس مميز", "باقة ورد , هودي , جرابات , شوكلاه ", 130),
+    new products(38, "gifts", false, "img/box2.jpg", "بوكس هدية ", "برواز ، ستيتش ، دفتر ستيتش ، كاسة ستيتش ، شوكلاه  ", 170),
+    new products(39, "giftmom", true, "img/satanandshanta.jpg", "هدية الام ", "باقة ساتان وشنتة هدايا عيد الام  ", 110),
+    new products(40, "satan", false, "img/menisatan.jpg", "  باقة ساتان   ", "باقة ساتان حجم صغير ", 30),
+    new products(41, "gifts", false, "img/box3.jpg", " بوكس ساعة وشنتة   ", " شنته وساعة  ماستر كوبي", 160),
+    new products(42, "giftmom", false, "img/satanmom.jpg", "باقة عيد الام ", " باقة ساتان عيد الام مع وشاح وبيبي فلور", 65),
+    new products(43, "Graduation", false, "img/satan5.jpg", "باقة تخرج ", "باقة ساتان تخرج مع وشاح ", 60),
+    new products(44, "Graduation", false, "img/seniar.jpg", "باقة تخرج ", " باقة ساتان تخرج ", 80),
+    new products(45, "Bridalbouquet", true, "img/stand.jpg", "باقة وستاند ", " باقة وستاند ذهب", 200),
+    new products(46, "satan", false, "img/satan6.jpg", "باقة ساتان ", "باقة ساتان حجم صغير", 50),
+
 
 
 
 ]
+// giftmom هدايا الام 
 // Bridalbouquet مسكة
 // Flowerbox بوكس 
 // satan ورد ساتان
