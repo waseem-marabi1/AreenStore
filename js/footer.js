@@ -91,7 +91,21 @@ function footerr(){
                     href="https://www.linkedin.com/in/waseem-marabi-b17b06326/" target="_blank"
                     class="text-purple-700 font-bold"> waseem mrabi</a> </p>
         </div>
-        </div>`
+        </div>
+       <a href="https://www.instagram.com/areen.store19?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Instagram"
+   title="تابعنا على Instagram"
+   class="flex justify-center items-center fixed bottom-4 right-4 z-50
+          w-14 h-14 rounded-full shadow-lg
+          bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600
+          hover:scale-110 transition duration-300">
+
+    <i class="fa-brands fa-instagram text-white text-3xl"></i>
+</a>
+        
+        `
 }
 let footer = document.querySelector(".footer")
 footer.innerHTML = footerr()
